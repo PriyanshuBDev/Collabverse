@@ -12,8 +12,9 @@ import { useNewUsersForDm } from "@/lib/queries/workspace/conversation/dm/new/us
 import { useInfiniteScroll } from "@/lib/hooks/useInfiniteScroll";
 import { useIsErrorToast } from "@/lib/hooks/useIsErrorToast";
 import Spinner1 from "@/components/loadings/Spinner1";
-import { useRouter } from "next/navigation";
-import { useCurrentWorkspace } from "@/lib/hooks/useCurrentWorkspace";
+// import { useRouter } from "next/navigation";
+// import { useCurrentWorkspace } from "@/lib/hooks/useCurrentWorkspace";
+import { useCreateNewDm } from "@/lib/queries/workspace/conversation/dm/new/useCreateNewDm";
 
 export default function NewChatPicker({
   setShow,
@@ -24,7 +25,7 @@ export default function NewChatPicker({
 }) {
   const mounted = useMounted();
   const [search, setSearch] = useState("");
-  const { slug } = useCurrentWorkspace();
+  // const { slug } = useCurrentWorkspace();
   const {
     data,
     isPending,
@@ -43,8 +44,7 @@ export default function NewChatPicker({
   const allUsers =
     data?.pages?.flatMap((page: usersToAddGroupResProps) => page.users) ?? [];
   const [showGroupCard, setShowGroupCard] = useState(false);
-  const router = useRouter();
-  // const { mutate, isPending: isNewDmPending } = useCreateNewDm();
+  const { mutate, isPending: isNewDmPending } = useCreateNewDm(true);
   const close = () => {
     setShow(false);
   };
@@ -112,8 +112,8 @@ export default function NewChatPicker({
                     key={m.id}
                     className="flex items-center gap-2 hover:bg-gray-200 dark:hover:bg-blk8 cursor-pointer px-2 py-1 rounded-lg active:scale-98 transition-transform duration-150"
                     onClick={() => {
-                      router.push(`/app/${slug}/conversation/new/${m.id}`);
-                      // mutate(m.id);
+                      // router.push(`/app/${slug}/conversation/new/${m.id}`);
+                      mutate(m.id);
                       close();
                     }}
                   >
@@ -168,7 +168,7 @@ export default function NewChatPicker({
           <NewGroupCard setShow={setShowGroupCard} setShowCard={setShow} />
         )}
       </OverlayWrapper>
-      {/* <div
+      <div
         className={`fixed inset-0 bg-black/30 flex items-center justify-center z-1000 ${
           isNewDmPending ? "visible" : "invisible pointer-events-none"
         }`}
@@ -178,7 +178,7 @@ export default function NewChatPicker({
           size="size-10 lg:size-16"
           color="text-gray-200 dark:text-blk3"
         ></Spinner1>
-      </div> */}
+      </div>
     </>
   );
 }
