@@ -1,0 +1,541 @@
+{
+    "activeFile": "InteriorTilesLITE.tsx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "": {
+            "scaleInDock": 1
+        },
+        "0-Tileset.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "13_Conference_Hall_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "21_Clothing_Store_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "21_Clothing_Store_Shadowless_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "50sdiner_room_door_tiles1.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "50sdiner_room_door_tiles2.tsx": {
+            "scaleInDock": 1.5,
+            "scaleInEditor": 1
+        },
+        "50sdiner_room_door_tiles3.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "50sdiner_set_withshadow.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "50sdiner_set_withshadow16.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "9.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "96.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "ChatGPT Image Sep 15, 2026, 08_41_57 PM.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "ChatGPT Image Sep 8, 2026, 10_34_23 PM.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Door.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "DoorDiner.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "DoorDiner1.tsx": {
+            "scaleInDock": 1.5,
+            "scaleInEditor": 1
+        },
+        "DoorDinner.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "DoorDinner2.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Gemini_Generated_Image_ihrps4ihrps4ihrp.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Graveyard_Set.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Graveyard_Set16.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Hair.tsx": {
+            "scaleInDock": 1.5,
+            "scaleInEditor": 1
+        },
+        "InteriorTilesLITE.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Interiors_16x16.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1.5,
+            "scaleInEditor": 1
+        },
+        "Interiors_32x32.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "Office-Furniture3.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Office-Furniture4.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Office-Furniture5.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Office-Furniture6.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Office-stuffs.tsx": {
+            "scaleInDock": 0.5,
+            "scaleInEditor": 1
+        },
+        "Office.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "Office2.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Office3.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Office4.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Office_BuildingTiles_32x32.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "Office_Exterior_32x32_Shadow.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Office_Exterior_32x32_Shadow16.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Office_Furniture_16x16_Shadow.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "Office_Furniture_32x32_Shadow.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "Office_Icons_32x32.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "Office_Icons_32x32_WhiteOL.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "Office_Terrain_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Office_Walls_32x32.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "Ofice-Furniture7.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "PixelOfficeAssets.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "PostApoc_Workshop_Icons.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "PostApoc_Workshop_Icons_WhiteOL.tsx": {
+            "scaleInDock": 1.5,
+            "scaleInEditor": 1
+        },
+        "PostApoc_Workshop_RoomTiles.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "PostApoc_Workshop_RoomTiles16.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "PostApoc_Workshop_WithShadow.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "PostApoc_Workshop_WithShadow16.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "Room_Builder_16x16.tsx": {
+            "scaleInDock": 1.5,
+            "scaleInEditor": 1
+        },
+        "Room_Builder_32x32.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "Sprite-0002.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Sprite-0003.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "a.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "all_assets.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "animated_blood_altar_32x32.tsx": {
+            "scaleInDock": 1
+        },
+        "animated_control_room_screens.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "animated_control_room_screens_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "animated_control_room_server_32x32.tsx": {
+            "scaleInDock": 1
+        },
+        "animated_receptionist.tsx": {
+            "scaleInDock": 1
+        },
+        "animated_receptionist_2.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "characters.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "classic_furnitureset_withshadow.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "classic_room_door_tiles.tsx": {
+            "scaleInDock": 1.5,
+            "scaleInEditor": 1
+        },
+        "clean_publicbathroom_door_tiles.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "clean_publicbathroom_set.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "clean_publicbathroom_set_withshadow.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "clean_publicbathroom_set_withshadow16.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "coastal_furnitureset_withshadow.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "coastal_room_door_tiles.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "dirty_publicbathroom_set_withshadow.tsx": {
+            "scaleInDock": 1.5,
+            "scaleInEditor": 1
+        },
+        "dirty_publicbathroom_set_withshadow32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "fancy_mansion_furnitureset_withshadow.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "fancy_mansion_room_door_tiles.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "female characters.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "file_0000000084c88211a6fbdbc0737c1836.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "furniture spritesheet.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "furniture spritesheet16.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "garden.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "makeShit-tiles.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "makeshift_furnitureset.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "midcentury_modern_furnitureset.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "midcentury_modern_room_door_tiles.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "neon_font.tsx": {
+            "scaleInDock": 1.5,
+            "scaleInEditor": 1
+        },
+        "o1.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "office-furniture.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "office-furniture1.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "office-furniture16.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "office-furniture2.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "office-stuff.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "office-stuff1.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "office.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 0.25,
+            "scaleInEditor": 1
+        },
+        "office1.tsx": {
+            "scaleInDock": 0.25,
+            "scaleInEditor": 1
+        },
+        "office5.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "officeSet.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "separately.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "sprite1.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "stylish_furnitureset_withshadow.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "stylish_furnitureset_withshadow16.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "stylish_modularfurniture_withshadow.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "stylish_modularfurniture_withshadow16.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "stylish_room_door_tiles.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "stylish_room_door_tiles16.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "texture_atlas.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "texture_atlas_margins.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "untitled.tmx": {
+            "expandedGroupLayers": [
+                14
+            ],
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1021.3333333333333,
+                "y": 820
+            }
+        }
+    },
+    "frame.defaultDuration": 150,
+    "last.exportedFilePath": "E:/TiledProject",
+    "last.imagePath": "E:/Assets/Modern Interiors RPG Tileset/Modern_Interiors/3_Animated_objects/32x32/spritesheets",
+    "map.height": 63,
+    "map.lastUsedExportFilter": "All Files (*)",
+    "map.lastUsedFormat": "tmx",
+    "map.width": 100,
+    "openFiles": [
+        "untitled.tmx",
+        "Room_Builder_32x32.tsx",
+        "PostApoc_Workshop_RoomTiles16.tsx",
+        "Interiors_16x16.tsx",
+        "stylish_room_door_tiles.tsx",
+        "makeshift_furnitureset.tsx",
+        "makeShit-tiles.tsx",
+        "Office.tsx",
+        "Office_BuildingTiles_32x32.tsx",
+        "Office_Exterior_32x32_Shadow.tsx",
+        "Office_Icons_32x32.tsx",
+        "Office_Furniture_32x32_Shadow.tsx",
+        "Office_Icons_32x32_WhiteOL.tsx",
+        "Office_Terrain_32x32.tsx",
+        "Office_Walls_32x32.tsx",
+        "PostApoc_Workshop_Icons.tsx",
+        "0-Tileset.tsx",
+        "Office_Furniture_16x16_Shadow.tsx",
+        "Office-stuffs.tsx",
+        "office-stuff.tsx",
+        "office-stuff1.tsx",
+        "office-furniture16.tsx",
+        "dirty_publicbathroom_set_withshadow.tsx",
+        "stylish_room_door_tiles16.tsx",
+        "stylish_modularfurniture_withshadow.tsx",
+        "stylish_furnitureset_withshadow.tsx",
+        "stylish_modularfurniture_withshadow16.tsx",
+        "stylish_furnitureset_withshadow16.tsx",
+        "PostApoc_Workshop_WithShadow16.tsx",
+        "PostApoc_Workshop_WithShadow.tsx",
+        "Sprite-0003.tsx",
+        "Sprite-0002.tsx",
+        "PostApoc_Workshop_RoomTiles.tsx",
+        "midcentury_modern_room_door_tiles.tsx",
+        "fancy_mansion_furnitureset_withshadow.tsx",
+        "clean_publicbathroom_set_withshadow16.tsx",
+        "clean_publicbathroom_set_withshadow.tsx",
+        "all_assets.tsx",
+        "50sdiner_room_door_tiles3.tsx",
+        "13_Conference_Hall_32x32.tsx",
+        "9.tsx",
+        "21_Clothing_Store_Shadowless_32x32.tsx",
+        "midcentury_modern_furnitureset.tsx",
+        "Graveyard_Set.tsx",
+        "Graveyard_Set16.tsx",
+        "Office_Exterior_32x32_Shadow16.tsx",
+        "garden.tsx",
+        "Room_Builder_16x16.tsx",
+        "texture_atlas.tsx",
+        "dirty_publicbathroom_set_withshadow32.tsx",
+        "fancy_mansion_room_door_tiles.tsx",
+        "InteriorTilesLITE.tsx",
+        "Interiors_32x32.tsx",
+        "Interiors_32x32.tsx"
+    ],
+    "project": "untitled.tiled-project",
+    "recentFiles": [
+        "untitled.tmx",
+        "Room_Builder_32x32.tsx",
+        "PostApoc_Workshop_RoomTiles16.tsx",
+        "Interiors_16x16.tsx",
+        "stylish_room_door_tiles.tsx",
+        "makeshift_furnitureset.tsx",
+        "makeShit-tiles.tsx",
+        "Office.tsx",
+        "Office_BuildingTiles_32x32.tsx",
+        "Office_Exterior_32x32_Shadow.tsx",
+        "Office_Icons_32x32.tsx",
+        "Office_Furniture_32x32_Shadow.tsx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.spacing": 0,
+    "tileset.tileSize": {
+        "height": 128,
+        "width": 96
+    },
+    "tileset.type": 0
+}

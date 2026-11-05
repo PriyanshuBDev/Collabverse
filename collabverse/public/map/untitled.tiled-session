@@ -1,0 +1,1613 @@
+{
+    "activeFile": "FullMap.tmj",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0-Tileset.tsx": {
+            "scaleInDock": 1
+        },
+        "21_Clothing_Store_Shadowless_32x32.tsx": {
+            "scaleInDock": 1
+        },
+        "50sdiner_room_door_tiles1.tsx": {
+            "scaleInDock": 1
+        },
+        "50sdiner_room_door_tiles3.tsx": {
+            "scaleInDock": 1
+        },
+        "50sdiner_set_withshadow.tsx": {
+            "scaleInDock": 1
+        },
+        "50sdiner_set_withshadow16.tsx": {
+            "scaleInDock": 1
+        },
+        "Door.tsx": {
+            "scaleInDock": 1
+        },
+        "DoorDiner.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj": {
+            "expandedGroupLayers": [
+                85,
+                23,
+                73,
+                155,
+                134,
+                19
+            ],
+            "scale": 0.33,
+            "selectedLayer": 75,
+            "viewCenter": {
+                "x": 1787.8787878787878,
+                "y": 806.0606060606061
+            }
+        },
+        "E:/original/pm/public/MapPhaser.tmj#0-Tileset": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#21_Clothing_Store_Shadowless_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#50sdiner_room_door_tiles1": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#50sdiner_room_door_tiles3": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#50sdiner_set_withshadow": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#50sdiner_set_withshadow16": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#Door": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#DoorDiner": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#Graveyard_Set": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#Graveyard_Set16": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#InteriorTilesLITE": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#Interiors_16x16": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#Interiors_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#Office": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#Office-stuffs": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#Office_BuildingTiles_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#Office_Exterior_32x32_Shadow": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#Office_Exterior_32x32_Shadow16": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#Office_Furniture_16x16_Shadow": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#Office_Furniture_32x32_Shadow": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#Office_Terrain_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#Office_Walls_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#PostApoc_Workshop_RoomTiles": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#PostApoc_Workshop_WithShadow": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#PostApoc_Workshop_WithShadow16": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#Room_Builder_16x16": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#Room_Builder_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#all_assets": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_blood_altar_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_butterfly_2_idle_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_butterfly_3_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_butterfly_6_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_butterfly_idle_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_candle_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_cat": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_control_room_screens_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_control_room_server_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_door_bathroom_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_door_big_1_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_door_big_2_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_door_big_3_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_door_big_4_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_door_big_4_locked_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_door_big_5_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_door_big_6_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_door_condominium_2_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_door_condominium_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_door_glass_double_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_door_glass_left_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_door_glass_right_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_door_glass_sliding_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_frog_2_idle_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_grocery_store_butchershop_cool_room_door_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_haunted_doll_painting_3_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_hospital_door_blue_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_hospital_door_green_double_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_hospital_glass_door_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_hospital_xraycabin_door_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_incense_burner_4_10_loop_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_japanese_shrine_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_japanese_sliding_door_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_museum_laser_front_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_museum_laser_front_modular_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_museum_laser_horizontal_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_museum_laser_horizontal_modular_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_museum_ticket_turnstile_vertical_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_receptionist": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_receptionist_2": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_security_camera_left_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_security_camera_wall_left_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_security_camera_wall_right_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_spell_book_32x32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#animated_spider": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#classic_furnitureset_withshadow": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#clean_publicbathroom_door_tiles": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#clean_publicbathroom_set_withshadow": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#clean_publicbathroom_set_withshadow16": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#coastal_furnitureset_withshadow": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#coastal_room_door_tiles": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#dirty_publicbathroom_set_withshadow": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#dirty_publicbathroom_set_withshadow32": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#fancy_mansion_furnitureset_withshadow": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#fancy_mansion_room_door_tiles": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#furniture spritesheet": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#garden": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#makeShit-tiles": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#makeshift_furnitureset": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#midcentury_modern_furnitureset": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#midcentury_modern_room_door_tiles": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#office-furniture": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#office-stuff": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#office-stuff1": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#stylish_furnitureset_withshadow16": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#stylish_modularfurniture_withshadow": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#stylish_modularfurniture_withshadow16": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#stylish_room_door_tiles": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#stylish_room_door_tiles16": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/MapPhaser.tmj#texture_atlas": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/0-Tileset.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/21_Clothing_Store_Shadowless_32x32.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/50sdiner_room_door_tiles1.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/50sdiner_room_door_tiles3.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/50sdiner_set_withshadow.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/50sdiner_set_withshadow16.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/Door.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/DoorDiner.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/DoorDiner1.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/Graveyard_Set.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/Graveyard_Set16.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/InteriorTilesLITE.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/Interiors_16x16.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/Interiors_32x32.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/Office-stuffs.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/Office.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/Office_BuildingTiles_32x32.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/Office_Exterior_32x32_Shadow.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/Office_Exterior_32x32_Shadow16.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/Office_Exterior_32x32_Shadow8.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/Office_Furniture_16x16_Shadow.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/Office_Furniture_32x32_Shadow.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/Office_Terrain_32x32.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/Office_Walls_32x32.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/PostApoc_Workshop_RoomTiles.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/PostApoc_Workshop_RoomTiles16.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/PostApoc_Workshop_WithShadow.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/PostApoc_Workshop_WithShadow16.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/Room_Builder_16x16.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/Room_Builder_32x32.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/all_assets.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/animated_blood_altar_32x32.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/animated_butterfly_2_idle_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_butterfly_3_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_butterfly_6_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_butterfly_idle_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_candle_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_cat.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_cat_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_control_room_screens_32x32.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/animated_control_room_server_32x32.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/animated_door_bathroom_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_door_big_1_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_door_big_2_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_door_big_3_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_door_big_4_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_door_big_4_locked_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_door_big_5_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_door_big_6_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_door_condominium_2_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_door_condominium_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_door_glass_double_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_door_glass_left_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_door_glass_right_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_door_glass_sliding_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_door_glass_vertical_left_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_door_glass_vertical_right_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_door_vertical_left_1_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_door_vertical_left_2_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_door_vertical_left_3_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_door_vertical_right_1_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_door_vertical_right_2_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_door_vertical_right_3_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_emergency_exit_32x32.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/animated_frog_2_idle_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_grocery_store_butchershop_cool_room_door_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_haunted_doll_painting_3_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_hospital_door_blue_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_hospital_door_green_double_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_hospital_glass_door_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_hospital_surgery_door_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_hospital_xraycabin_door_2_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_hospital_xraycabin_door_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_incense_burner_4_10_loop_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_japanese_shrine_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_japanese_sliding_door_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_museum_laser_front_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_museum_laser_front_modular_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_museum_laser_horizontal_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_museum_laser_horizontal_modular_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_museum_ticket_turnstile_vertical_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_receptionist.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/animated_receptionist_2.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/animated_security_camera_left_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_security_camera_wall_left_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_security_camera_wall_right_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_spell_book_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/animated_spider.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "E:/original/pm/public/tilesets/classic_furnitureset_withshadow.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/clean_publicbathroom_door_tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/clean_publicbathroom_set_withshadow.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/clean_publicbathroom_set_withshadow16.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/coastal_furnitureset_withshadow.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/coastal_room_door_tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/dirty_publicbathroom_set_withshadow.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/dirty_publicbathroom_set_withshadow32.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/fancy_mansion_furnitureset_withshadow.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/fancy_mansion_room_door_tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/furniture spritesheet.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/garden.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/makeShit-tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/makeshift_furnitureset.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/midcentury_modern_furnitureset.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/midcentury_modern_room_door_tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/office-furniture.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/office-furniture16.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/office-stuff.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/office-stuff1.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/stylish_furnitureset_withshadow16.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/stylish_modularfurniture_withshadow.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/stylish_modularfurniture_withshadow16.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/stylish_room_door_tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/stylish_room_door_tiles16.tsx": {
+            "scaleInDock": 1
+        },
+        "E:/original/pm/public/tilesets/texture_atlas.tsx": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj": {
+            "expandedGroupLayers": [
+                134,
+                23,
+                70
+            ],
+            "scale": 3,
+            "selectedLayer": 32,
+            "viewCenter": {
+                "x": 2029.3333333333333,
+                "y": 297.3333333333333
+            }
+        },
+        "FullMap.tmj#0-Tileset": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#21_Clothing_Store_Shadowless_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#50sdiner_room_door_tiles1": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#50sdiner_room_door_tiles3": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#50sdiner_set_withshadow": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#50sdiner_set_withshadow16": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#Door": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#DoorDiner": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#DoorDiner1": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#Graveyard_Set": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#Graveyard_Set16": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#InteriorTilesLITE": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#Interiors_16x16": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#Interiors_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#Office": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#Office-stuffs": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#Office_BuildingTiles_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#Office_Exterior_32x32_Shadow": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#Office_Exterior_32x32_Shadow16": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#Office_Furniture_16x16_Shadow": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#Office_Furniture_32x32_Shadow": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#Office_Terrain_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#Office_Walls_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#PostApoc_Workshop_RoomTiles": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#PostApoc_Workshop_WithShadow": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#PostApoc_Workshop_WithShadow16": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#Room_Builder_16x16": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#Room_Builder_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#all_assets": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_blood_altar_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_butterfly_2_idle_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_butterfly_3_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_butterfly_6_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_butterfly_idle_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_candle_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_cat": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_control_room_screens_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_control_room_server_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_door_bathroom_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_door_big_1_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_door_big_2_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_door_big_3_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_door_big_4_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_door_big_4_locked_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_door_big_5_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_door_big_6_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_door_condominium_2_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_door_condominium_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_door_glass_double_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_door_glass_left_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_door_glass_right_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_door_glass_sliding_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_frog_2_idle_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_grocery_store_butchershop_cool_room_door_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_haunted_doll_painting_3_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_hospital_door_blue_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_hospital_door_green_double_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_hospital_glass_door_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_hospital_xraycabin_door_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_incense_burner_4_10_loop_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_japanese_shrine_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_japanese_sliding_door_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_museum_laser_front_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_museum_laser_front_modular_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_museum_laser_horizontal_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_museum_laser_horizontal_modular_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_museum_ticket_turnstile_vertical_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_receptionist": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_receptionist_2": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_security_camera_left_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_security_camera_wall_left_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_security_camera_wall_right_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_spell_book_32x32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#animated_spider": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#classic_furnitureset_withshadow": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#clean_publicbathroom_door_tiles": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#clean_publicbathroom_set_withshadow": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#clean_publicbathroom_set_withshadow16": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#coastal_furnitureset_withshadow": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#coastal_room_door_tiles": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#dirty_publicbathroom_set_withshadow": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#dirty_publicbathroom_set_withshadow32": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#fancy_mansion_furnitureset_withshadow": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#fancy_mansion_room_door_tiles": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#furniture spritesheet": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#garden": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#makeShit-tiles": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#makeshift_furnitureset": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#midcentury_modern_furnitureset": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#midcentury_modern_room_door_tiles": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#office-furniture": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#office-stuff": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#office-stuff1": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#stylish_furnitureset_withshadow16": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#stylish_modularfurniture_withshadow": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#stylish_modularfurniture_withshadow16": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#stylish_room_door_tiles": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#stylish_room_door_tiles16": {
+            "scaleInDock": 1
+        },
+        "FullMap.tmj#texture_atlas": {
+            "scaleInDock": 1
+        },
+        "Graveyard_Set.tsx": {
+            "scaleInDock": 1
+        },
+        "Graveyard_Set16.tsx": {
+            "scaleInDock": 1
+        },
+        "InteriorTilesLITE.tsx": {
+            "scaleInDock": 1
+        },
+        "Interiors_16x16.tsx": {
+            "scaleInDock": 1
+        },
+        "Interiors_32x32.tsx": {
+            "scaleInDock": 1
+        },
+        "Map.tmj": {
+            "expandedGroupLayers": [
+                70
+            ],
+            "expandedObjectLayers": [
+                30,
+                149,
+                148
+            ],
+            "scale": 0.75,
+            "selectedLayer": -1,
+            "viewCenter": {
+                "x": 911.9999999999999,
+                "y": 1521.333333333333
+            }
+        },
+        "MapPhaser.tmj": {
+            "expandedGroupLayers": [
+                7,
+                95,
+                155,
+                141,
+                70,
+                62,
+                80,
+                43
+            ],
+            "scale": 1.5,
+            "selectedLayer": 99,
+            "viewCenter": {
+                "x": 1910,
+                "y": 319.33333333333326
+            }
+        },
+        "MapPhaser.tmj#0-Tileset": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#21_Clothing_Store_Shadowless_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#50sdiner_room_door_tiles1": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#50sdiner_room_door_tiles3": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#50sdiner_set_withshadow": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#50sdiner_set_withshadow16": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#Door": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#DoorDiner": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#Graveyard_Set": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#Graveyard_Set16": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#InteriorTilesLITE": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "MapPhaser.tmj#Interiors_16x16": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#Interiors_32x32": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "MapPhaser.tmj#Office": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#Office-stuffs": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#Office_BuildingTiles_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#Office_Exterior_32x32_Shadow": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#Office_Exterior_32x32_Shadow16": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#Office_Furniture_16x16_Shadow": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#Office_Furniture_32x32_Shadow": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#Office_Terrain_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#Office_Walls_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#PostApoc_Workshop_RoomTiles": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#PostApoc_Workshop_WithShadow": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#PostApoc_Workshop_WithShadow16": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#Room_Builder_16x16": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#Room_Builder_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#all_assets": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_blood_altar_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_butterfly_2_idle_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_butterfly_3_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_butterfly_6_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_butterfly_idle_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_candle_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_cat": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_control_room_screens_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_control_room_server_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_door_bathroom_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_door_big_1_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_door_big_2_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_door_big_3_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_door_big_4_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_door_big_4_locked_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_door_big_5_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_door_big_6_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_door_condominium_2_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_door_condominium_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_door_glass_double_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_door_glass_left_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_door_glass_right_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_door_glass_sliding_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_frog_2_idle_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_grocery_store_butchershop_cool_room_door_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_haunted_doll_painting_3_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_hospital_door_blue_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_hospital_door_green_double_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_hospital_glass_door_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_hospital_xraycabin_door_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_incense_burner_4_10_loop_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_japanese_shrine_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_japanese_sliding_door_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_museum_laser_front_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_museum_laser_front_modular_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_museum_laser_horizontal_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_museum_laser_horizontal_modular_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_museum_ticket_turnstile_vertical_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_receptionist": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_receptionist_2": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_security_camera_left_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_security_camera_wall_left_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_security_camera_wall_right_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_spell_book_32x32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#animated_spider": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#classic_furnitureset_withshadow": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#clean_publicbathroom_door_tiles": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#clean_publicbathroom_set_withshadow": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#clean_publicbathroom_set_withshadow16": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#coastal_furnitureset_withshadow": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#coastal_room_door_tiles": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#dirty_publicbathroom_set_withshadow": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#dirty_publicbathroom_set_withshadow32": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#fancy_mansion_furnitureset_withshadow": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#fancy_mansion_room_door_tiles": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#furniture spritesheet": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#garden": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#makeShit-tiles": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "MapPhaser.tmj#makeshift_furnitureset": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "MapPhaser.tmj#midcentury_modern_furnitureset": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#midcentury_modern_room_door_tiles": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#office-furniture": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#office-stuff": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#office-stuff1": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#stylish_furnitureset_withshadow16": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "MapPhaser.tmj#stylish_modularfurniture_withshadow": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#stylish_modularfurniture_withshadow16": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#stylish_room_door_tiles": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#stylish_room_door_tiles16": {
+            "scaleInDock": 1
+        },
+        "MapPhaser.tmj#texture_atlas": {
+            "scaleInDock": 1
+        },
+        "Office-stuffs.tsx": {
+            "scaleInDock": 1
+        },
+        "Office.tsx": {
+            "scaleInDock": 1
+        },
+        "OfficeMap.tmj": {
+            "scale": 0.30912698412698414,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1599.6662387676508,
+                "y": 1009.2939666238766
+            }
+        },
+        "Office_BuildingTiles_32x32.tsx": {
+            "scaleInDock": 1
+        },
+        "Office_Exterior_32x32_Shadow.tsx": {
+            "scaleInDock": 1
+        },
+        "Office_Exterior_32x32_Shadow16.tsx": {
+            "scaleInDock": 1
+        },
+        "Office_Furniture_16x16_Shadow.tsx": {
+            "scaleInDock": 1
+        },
+        "Office_Furniture_32x32_Shadow.tsx": {
+            "scaleInDock": 1
+        },
+        "Office_Terrain_32x32.tsx": {
+            "scaleInDock": 1
+        },
+        "Office_Walls_32x32.tsx": {
+            "scaleInDock": 1
+        },
+        "PostApoc_Workshop_RoomTiles.tsx": {
+            "scaleInDock": 1
+        },
+        "PostApoc_Workshop_RoomTiles16.tsx": {
+            "scaleInDock": 1
+        },
+        "PostApoc_Workshop_WithShadow.tsx": {
+            "scaleInDock": 1
+        },
+        "PostApoc_Workshop_WithShadow16.tsx": {
+            "scaleInDock": 1
+        },
+        "Room_Builder_16x16.tsx": {
+            "scaleInDock": 1
+        },
+        "Room_Builder_32x32.tsx": {
+            "scaleInDock": 1
+        },
+        "all_assets.tsx": {
+            "scaleInDock": 1
+        },
+        "animated_blood_altar_32x32.tsx": {
+            "scaleInDock": 1
+        },
+        "animated_control_room_screens_32x32.tsx": {
+            "scaleInDock": 1
+        },
+        "animated_control_room_server_32x32.tsx": {
+            "scaleInDock": 1
+        },
+        "animated_emergency_exit_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "animated_frog_2_idle_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "animated_incense_burner_4_10_loop_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "animated_museum_ticket_turnstile_vertical_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "animated_receptionist.tsx": {
+            "scaleInDock": 1
+        },
+        "animated_receptionist_2.tsx": {
+            "scaleInDock": 1
+        },
+        "animated_security_camera_right_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "classic_furnitureset_withshadow.tsx": {
+            "scaleInDock": 1
+        },
+        "clean_publicbathroom_door_tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "clean_publicbathroom_set_withshadow.tsx": {
+            "scaleInDock": 1
+        },
+        "clean_publicbathroom_set_withshadow16.tsx": {
+            "scaleInDock": 1
+        },
+        "coastal_furnitureset_withshadow.tsx": {
+            "scaleInDock": 1
+        },
+        "coastal_room_door_tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "dirty_publicbathroom_set_withshadow.tsx": {
+            "scaleInDock": 1
+        },
+        "dirty_publicbathroom_set_withshadow32.tsx": {
+            "scaleInDock": 1
+        },
+        "fancy_mansion_furnitureset_withshadow.tsx": {
+            "scaleInDock": 1
+        },
+        "fancy_mansion_room_door_tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "furniture spritesheet.tsx": {
+            "scaleInDock": 1
+        },
+        "garden.tsx": {
+            "scaleInDock": 1
+        },
+        "makeShit-tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "makeshift_furnitureset.tsx": {
+            "scaleInDock": 1
+        },
+        "midcentury_modern_furnitureset.tsx": {
+            "scaleInDock": 1
+        },
+        "midcentury_modern_room_door_tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "office-furniture.tsx": {
+            "scaleInDock": 1
+        },
+        "office-furniture16.tsx": {
+            "scaleInDock": 1
+        },
+        "office-stuff.tsx": {
+            "scaleInDock": 1
+        },
+        "office-stuff1.tsx": {
+            "scaleInDock": 1
+        },
+        "stylish_furnitureset_withshadow16.tsx": {
+            "scaleInDock": 1
+        },
+        "stylish_modularfurniture_withshadow.tsx": {
+            "scaleInDock": 1
+        },
+        "stylish_modularfurniture_withshadow16.tsx": {
+            "scaleInDock": 1
+        },
+        "stylish_room_door_tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "stylish_room_door_tiles16.tsx": {
+            "scaleInDock": 1
+        },
+        "texture_atlas.tsx": {
+            "scaleInDock": 1
+        },
+        "tilesets/DoorDiner1.tsx": {
+            "scaleInDock": 1
+        },
+        "tilesets/Office_Exterior_32x32_Shadow8.tsx": {
+            "scaleInDock": 1
+        },
+        "untitled.tmx": {
+            "scale": 0.33,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1490.9090909090908,
+                "y": 1454.5454545454545
+            }
+        }
+    },
+    "frame.defaultDuration": 100,
+    "last.exportedFilePath": "E:/original/pm/public/map",
+    "last.externalTilesetPath": "E:/original/pm/public/tilesets",
+    "last.imagePath": "E:/original/pm/public/tilesets",
+    "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
+    "map.lastUsedFormat": "json",
+    "openFiles": [
+        "FullMap.tmj"
+    ],
+    "project": "untitled.tiled-project",
+    "recentFiles": [
+        "FullMap.tmj",
+        "MapPhaser.tmj",
+        "E:/original/pm/public/MapPhaser.tmj",
+        "E:/original/pm/public/tilesets/DoorDiner1.tsx",
+        "E:/original/pm/public/tilesets/Office_Exterior_32x32_Shadow8.tsx",
+        "E:/original/pm/public/tilesets/animated_museum_ticket_turnstile_vertical_32x32.tsx",
+        "animated_museum_ticket_turnstile_vertical_32x32.tsx",
+        "E:/original/pm/public/tilesets/animated_japanese_sliding_door_32x32.tsx",
+        "E:/original/pm/public/tilesets/animated_grocery_store_butchershop_cool_room_door_32x32.tsx",
+        "E:/original/pm/public/tilesets/animated_door_big_4_locked_32x32.tsx",
+        "Map.tmj",
+        "animated_emergency_exit_32x32.tsx"
+    ],
+    "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 8,
+        "width": 8
+    }
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tileset version="1.10" tiledversion="1.12.2" name="animated_door_condominium_2_32x32" tilewidth="96" tileheight="64" tilecount="14" columns="14">
+ <image source="animated_door_condominium_2_32x32.png" width="1344" height="64"/>
+</tileset>

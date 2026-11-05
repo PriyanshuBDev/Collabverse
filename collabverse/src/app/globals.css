@@ -1,0 +1,457 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+@theme {
+  --color-background: rgba(245, 245, 245);
+  --color-border: rgba(212, 212, 212);
+  --color-card: rgba(255, 255, 255);
+  --color-grape: rgba(114, 35, 204);
+  --color-txt-primary: rgba(23, 23, 23);
+  --color-txt-secondary: rgba(115, 115, 115);
+  --color-btn: rgba(139, 92, 246);
+  --color-btn-active: rgba(124, 58, 237);
+  --color-btn-text: rgba(255, 255, 255);
+  --color-blk: rgba(15, 15, 15);
+  --color-blk1: rgba(20, 20, 20);
+  --color-blk2: rgba(25, 25, 25);
+  --color-blk3: rgba(35, 35, 35);
+  --color-blk4: rgba(40, 40, 40);
+  --color-blk5: rgba(45, 45, 45);
+  --color-blk6: rgba(50, 50, 50);
+
+  --color-blk7: rgba(55, 55, 55);
+
+  --color-blk8: rgba(60, 60, 60);
+  --color-blk9: rgba(70, 70, 70);
+}
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+[data-mounted="false"] {
+  @apply absolute inset-0 ml-0 mt-0;
+}
+[data-mounted="true"][data-sidebar-open="true"] {
+  @apply md:ml-65 mt-15;
+}
+[chat-side="true"] {
+  @apply md:ml-65;
+}
+[chat-side="false"] {
+  @apply md:ml-0;
+}
+
+[data-mounted="true"][data-sidebar-open="false"] {
+  @apply md:ml-0 mt-15;
+}
+
+[chat-mounted="false"] {
+  @apply ml-20 mt-0;
+}
+[chat-mounted="true"][chat-sidebar-open="true"] {
+  @apply ml-85;
+}
+
+[chat-mounted="true"][chat-sidebar-open="false"] {
+  @apply ml-20;
+}
+
+.recharts-wrapper:focus,
+.recharts-surface:focus {
+  outline: none;
+}
+.recharts-wrapper path:focus,
+.recharts-wrapper g:focus,
+.recharts-wrapper:focus {
+  outline: none;
+  stroke: #fff;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.3);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(100, 100, 100, 0.5);
+}
+/* Make DayPicker compact */
+
+.small-calendar .rdp {
+  font-size: 1rem; /* shrinks all text */
+  line-height: 1rem;
+}
+
+.small-calendar .rdp-months {
+  border-collapse: collapse; /* removes table spacing */
+  margin: 0;
+}
+
+.small-calendar .rdp-month {
+  margin: 0;
+  padding: 0;
+}
+
+.small-calendar .rdp-weekdays {
+  font-size: 1rem; /* smaller weekday labels */
+  margin: 0;
+  padding: 0;
+}
+
+.small-calendar .rdp-day {
+  width: 1.5rem; /* shrink width */
+  height: 1.5rem; /* shrink height */
+  line-height: 1.5rem;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.small-calendar .rdp-caption {
+  font-size: 0.7rem;
+  margin-bottom: 0.25rem;
+  padding: 0;
+}
+/* From Uiverse.io by Type-Delta */
+/* a clone from joshwcomeau.com 
+ * but this version runs on pure CSS
+ */
+
+.themeToggle {
+  position: relative;
+  display: inline-block;
+  color: #99a1af;
+}
+
+.st-sunMoonThemeToggleBtn {
+  position: relative;
+  cursor: pointer;
+}
+
+.st-sunMoonThemeToggleBtn .themeToggleInput {
+  opacity: 0;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg {
+  color: #99a1af;
+}
+
+.st-sunMoonThemeToggleBtn svg {
+  color: #000;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s ease;
+  transform: rotate(40deg);
+}
+
+.st-sunMoonThemeToggleBtn svg .sunMoon {
+  transform-origin: center center;
+  transition: inherit;
+  transform: scale(1);
+}
+
+.st-sunMoonThemeToggleBtn svg .sunRay {
+  transform-origin: center center;
+  transform: scale(0);
+}
+
+.st-sunMoonThemeToggleBtn svg mask > circle {
+  transition: transform 0.64s cubic-bezier(0.41, 0.64, 0.32, 1.575);
+  transform: translate(0px, 0px);
+}
+
+.st-sunMoonThemeToggleBtn svg .sunRay2 {
+  animation-delay: 0.05s !important;
+}
+.st-sunMoonThemeToggleBtn svg .sunRay3 {
+  animation-delay: 0.1s !important;
+}
+.st-sunMoonThemeToggleBtn svg .sunRay4 {
+  animation-delay: 0.17s !important;
+}
+.st-sunMoonThemeToggleBtn svg .sunRay5 {
+  animation-delay: 0.25s !important;
+}
+.st-sunMoonThemeToggleBtn svg .sunRay5 {
+  animation-delay: 0.29s !important;
+}
+
+.st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg {
+  transform: rotate(90deg);
+}
+.st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg mask > circle {
+  transform: translate(16px, -3px);
+}
+.st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg .sunMoon {
+  transform: scale(0.55);
+}
+.st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg .sunRay {
+  animation: showRay1832 0.4s ease 0s 1 forwards;
+}
+
+@keyframes showRay1832 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s linear infinite;
+}
+
+.tiptap p.is-editor-empty:first-child::before {
+  color: #9ca3af; /* gray-400 */
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+.tiptap {
+  outline: none;
+}
+
+.tippy-box[data-theme~="none"] {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+/* Optional: disable inner content padding too */
+.tippy-content {
+  padding: 0 !important;
+}
+
+.tiny-calendar .rdp {
+  font-size: 0.6rem; /* shrinks all text */
+  line-height: 0.6rem;
+}
+
+.tiny-calendar .rdp-months {
+  border-collapse: collapse; /* removes table spacing */
+  margin: 0;
+}
+
+.tiny-calendar .rdp-month {
+  margin: 0;
+  padding: 0;
+}
+
+.tiny-calendar .rdp-weekdays {
+  font-size: 0.6rem; /* smaller weekday labels */
+  margin: 0;
+  padding: 0;
+}
+
+.tiny-calendar .rdp-day {
+  width: 1rem; /* shrink width */
+  height: 1rem; /* shrink height */
+  line-height: 1rem;
+  padding: 0;
+  margin: 0;
+  font-size: 0.6rem;
+  font-weight: 500;
+}
+
+.tiny-calendar .rdp-caption {
+  font-size: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+.flash-highlight {
+  position: relative;
+}
+
+.flash-highlight::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(59, 130, 246, 0.4); /* blue-500 at 40% */
+  border-radius: inherit;
+  animation: flashFade 1.5s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes flashFade {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.no-pointer-children * {
+  pointer-events: none;
+}
+
+.no-pointer-children {
+  pointer-events: auto; /* parent still clickable */
+}
+
+.no-scroll-arrows::-webkit-scrollbar-button {
+  display: none;
+}
+
+.overlay-scrollbar {
+  overflow-y: overlay; /* this makes scrollbar float over content */
+}
+
+.overlay-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.overlay-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(120, 120, 120, 0);
+  border-radius: 6px;
+  transition: background-color 0.25s ease;
+}
+
+.overlay-scrollbar:hover::-webkit-scrollbar-thumb {
+  background: rgba(160, 160, 160, 0.7);
+}
+
+.overlay-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.thinScrollbar {
+  scrollbar-width: thin;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.overflow-wrap-anywhere {
+  overflow-wrap: anywhere;
+}
+
+.blueScrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 transparent;
+}
+
+.blueScrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.blueScrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #06b6d4, #3b82f6);
+  border-radius: 999px;
+}
+
+.flowspace-volume-slider {
+  --volume-progress: 0%;
+  display: block;
+  width: 100%;
+  height: 20px;
+  margin: 0;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.flowspace-volume-slider:focus-visible {
+  outline: 2px solid #6ee7b7;
+  outline-offset: 3px;
+}
+
+.flowspace-volume-slider::-webkit-slider-runnable-track {
+  height: 8px;
+  border: 1px solid #475569;
+  background: linear-gradient(
+    to right,
+    #34d399 0 var(--volume-progress),
+    #1e293b var(--volume-progress) 100%
+  );
+  box-shadow: inset 1px 1px 0 rgb(255 255 255 / 8%);
+}
+
+.flowspace-volume-slider::-webkit-slider-thumb {
+  width: 18px;
+  height: 18px;
+  margin-top: -6px;
+  appearance: none;
+  border: 2px solid #a7f3d0;
+  border-radius: 2px;
+  background: #065f46;
+  box-shadow: 2px 2px 0 #020617;
+}
+
+.flowspace-volume-slider::-moz-range-track {
+  height: 8px;
+  border: 1px solid #475569;
+  background: #1e293b;
+  box-shadow: inset 1px 1px 0 rgb(255 255 255 / 8%);
+}
+
+.flowspace-volume-slider::-moz-range-progress {
+  height: 8px;
+  background: #34d399;
+}
+
+.flowspace-volume-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #a7f3d0;
+  border-radius: 2px;
+  background: #065f46;
+  box-shadow: 2px 2px 0 #020617;
+}
+
+@keyframes selectedPop {
+  0%,
+  100% {
+    transform: translate(3px, 4px) scale(1);
+  }
+
+  50% {
+    transform: translate(3px, 4px) scale(0.96);
+  }
+}
+
+@keyframes checkPop {
+  0% {
+    transform: scale(0);
+  }
+
+  70% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
