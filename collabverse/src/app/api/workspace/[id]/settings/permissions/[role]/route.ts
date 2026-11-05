@@ -15,12 +15,16 @@ export const PATCH = withAuth(
   async (
     user: User,
     req: Request,
-    { params }: { params: { id: string; role: "Admin" | "Member" } },
+    { params: paramsPromise }: { params: Promise<{ id: string; role: string }> },
   ) => {
+    const params = await paramsPromise;
     const workspaceId = params.id;
     const role = params.role;
     if (!workspaceId || !role) {
       return apiError("Invalid parameters", 400);
+    }
+    if (role !== "Admin" && role !== "Member") {
+      return apiError("Invalid data", 400);
     }
     const body = await req.json();
     try {

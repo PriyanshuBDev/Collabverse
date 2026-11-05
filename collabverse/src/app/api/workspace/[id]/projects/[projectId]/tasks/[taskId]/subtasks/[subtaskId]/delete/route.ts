@@ -10,16 +10,17 @@ export const DELETE = withAuth(
     user: User,
     req: Request,
     {
-      params,
+      params: paramsPromise,
     }: {
-      params: {
+      params: Promise<{
         id: string;
         projectId: string;
         taskId: string;
         subtaskId: string;
-      };
+      }>;
     },
   ) => {
+    const params = await paramsPromise;
     const workspaceId = params.id;
     const projectId = params.projectId;
     const taskId = params.taskId;

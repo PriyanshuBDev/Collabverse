@@ -9,8 +9,9 @@ export const GET = withAuth(
   async (
     user: User,
     req: Request,
-    { params }: { params: { slug: string; token: string } },
+    { params: paramsPromise }: { params: Promise<{ slug: string; token: string }> },
   ) => {
+    const params = await paramsPromise;
     const workspaceSlug = params.slug;
     const token = params.token;
     if (!workspaceSlug || !token) {

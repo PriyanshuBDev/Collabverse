@@ -11,7 +11,8 @@ const getTasksSchema = z.object({
   search: z.string().trim().min(2),
 });
 export const GET = withAuth(
-  async (user: User, req: Request, { params }: { params: { id: string } }) => {
+  async (user: User, req: Request, { params: paramsPromise }: { params: Promise<{ id: string }> }) => {
+    const params = await paramsPromise;
     const workspaceId = params.id;
     const { searchParams } = new URL(req.url);
     const queryObj = Object.fromEntries(searchParams.entries());

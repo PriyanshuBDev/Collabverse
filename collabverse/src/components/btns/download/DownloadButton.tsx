@@ -1,7 +1,8 @@
 import { useRef, useState } from "react";
-import { CircularProgress } from "../progress/CircularProgress";
+
 import { downloadBatch } from "@/lib/functions/download/downloadBatch";
 import axios from "axios";
+import { CircularProgress } from "@/components/progress/CircularProgress";
 
 export default function DownloadButton({
   urls,

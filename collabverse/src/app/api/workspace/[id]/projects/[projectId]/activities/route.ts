@@ -29,8 +29,9 @@ export const GET = withAuth(
   async (
     user: User,
     req: Request,
-    { params }: { params: { id: string; projectId: string; taskId: string } },
+    { params: paramsPromise }: { params: Promise<{ id: string; projectId: string }> },
   ) => {
+    const params = await paramsPromise;
     const workspaceId = params.id;
     const projectId = params.projectId;
     const { searchParams } = new URL(req.url);

@@ -4,11 +4,12 @@ import TaskProvider from "@/components/wrappers/TaskProvider";
 
 export default async function TaskLayout({
   children,
-  params,
+  params: paramsPromise,
 }: {
   children: React.ReactNode;
-  params: { taskSlug: string };
+  params: Promise<{ taskSlug: string }>;
 }) {
+  const params = await paramsPromise;
   const { taskSlug } = await params;
   const slug = decodeURIComponent(taskSlug);
   return (

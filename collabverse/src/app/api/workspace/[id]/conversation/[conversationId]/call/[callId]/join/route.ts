@@ -9,9 +9,10 @@ export const POST = withAuth(
     user: User,
     req: Request,
     {
-      params,
-    }: { params: { id: string; conversationId: string; callId: string } },
+      params: paramsPromise,
+    }: { params: Promise<{ id: string; conversationId: string; callId: string }> },
   ) => {
+    const params = await paramsPromise;
     const workspaceId = params.id;
     const conversationId = params.conversationId;
     const callId = params.callId;

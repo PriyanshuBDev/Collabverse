@@ -1,5 +1,5 @@
 import { CompleteChatProps } from "@/app/interfaces";
-import { bubbleShape } from "@/components/conversation/chatArea/ChatArea";
+import { bubbleShape } from "@/components/conversation/chatArea/mainArea/ChatArea";
 
 export default function MessageShape(
   chats: CompleteChatProps[],

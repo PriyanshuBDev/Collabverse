@@ -72,11 +72,12 @@ export const GET = withAuth(
     user: User,
     req: Request,
     {
-      params,
+      params: paramsPromise,
     }: {
-      params: { id: string; conversationId: string };
+      params: Promise<{ id: string; conversationId: string }>;
     },
   ) => {
+    const params = await paramsPromise;
     const workspaceId = params.id;
     const conversationId = params.conversationId;
 

@@ -12,7 +12,6 @@ export const GET = withAuth(async (user: User) => {
         _count: {
           select: {
             ownedWorkspaces: true,
-            ownedProjects: true,
           },
         },
       },
@@ -20,12 +19,17 @@ export const GET = withAuth(async (user: User) => {
     if (!res) {
       return new Response("User not found", { status: 404 });
     }
+    const projCount = await prisma.project.count({
+      where: {
+        currentOwner: { userId: user.id },
+      },
+    });
     return Response.json(
       {
         email: res.email,
         id: res.id,
         wsCount: res._count.ownedWorkspaces,
-        projCount: res._count.ownedProjects,
+        projCount: projCount,
       },
       { status: 200 },
     );

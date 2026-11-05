@@ -9,11 +9,12 @@ import { currentWsProps } from "@/lib/queries/workspace/useWorkspace";
 
 export default async function Dashboard({
   children,
-  params,
+  params: paramsPromise,
 }: Readonly<{
   children: React.ReactNode;
-  params: { workspace: string };
+  params: Promise<{ workspace: string }>;
 }>) {
+  const params = await paramsPromise;
   const { workspace } = await params;
   const slug = decodeURIComponent(workspace);
   const initialWs: currentWsProps = await getCurrentWsServer(slug);

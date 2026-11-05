@@ -16,7 +16,8 @@ export const usernameWsInviteSchema = z.object({
 });
 
 export const POST = withAuth(
-  async (user: User, req: Request, { params }: { params: { id: string } }) => {
+  async (user: User, req: Request, { params: paramsPromise }: { params: Promise<{ id: string }> }) => {
+    const params = await paramsPromise;
     const workspaceId = params.id;
     if (!workspaceId) {
       return apiError("Invalid parameters", 400);

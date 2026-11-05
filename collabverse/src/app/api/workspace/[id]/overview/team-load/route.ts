@@ -15,7 +15,8 @@ const StatusLabel: Record<TaskStatus, StatusLabelKey> = {
 };
 
 export const GET = withAuth(
-  async (user: User, req: Request, { params }: { params: { id: string } }) => {
+  async (user: User, req: Request, { params: paramsPromise }: { params: Promise<{ id: string }> }) => {
+    const params = await paramsPromise;
     const workspaceId = params.id;
     const { searchParams } = new URL(req.url);
     const projectId = searchParams.get("projectId");

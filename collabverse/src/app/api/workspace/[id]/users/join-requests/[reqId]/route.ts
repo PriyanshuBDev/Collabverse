@@ -14,8 +14,9 @@ export const PATCH = withAuth(
   async (
     user: User,
     req: Request,
-    { params }: { params: { id: string; reqId: string } },
+    { params: paramsPromise }: { params: Promise<{ id: string; reqId: string }> },
   ) => {
+    const params = await paramsPromise;
     const workspaceId = params.id;
     const joinReqId = params.reqId;
     const body = await req.json();

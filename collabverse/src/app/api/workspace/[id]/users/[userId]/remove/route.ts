@@ -11,8 +11,9 @@ export const DELETE = withAuth(
   async (
     user: User,
     req: Request,
-    { params }: { params: { id: string; userId: string } },
+    { params: paramsPromise }: { params: Promise<{ id: string; userId: string }> },
   ) => {
+    const params = await paramsPromise;
     const workspaceId = params.id;
     const userId = params.userId;
     if (!workspaceId || !userId) {

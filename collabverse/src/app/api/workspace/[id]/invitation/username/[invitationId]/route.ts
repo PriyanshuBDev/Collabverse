@@ -13,8 +13,9 @@ export const POST = withAuth(
   async (
     user: User,
     req: Request,
-    { params }: { params: { id: string; invitationId: string } },
+    { params: paramsPromise }: { params: Promise<{ id: string; invitationId: string }> },
   ) => {
+    const params = await paramsPromise;
     const workspaceId = params.id;
     const invitationId = params.invitationId;
     if (!workspaceId || !invitationId) {

@@ -19,8 +19,9 @@ export const GET = withAuth(
   async (
     user: User,
     req: Request,
-    { params }: { params: { id: string; slug: string } },
+    { params: paramsPromise }: { params: Promise<{ id: string; slug: string }> },
   ) => {
+    const params = await paramsPromise;
     const workspaceId = params.id;
     const projectSlug = params.slug;
     if (!workspaceId || !projectSlug) {

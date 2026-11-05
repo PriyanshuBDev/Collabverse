@@ -4,11 +4,12 @@ import { getCurrentConversation } from "@/lib/api/workspace/conversation/getCurr
 
 export default async function Layout({
   children,
-  params,
+  params: paramsPromise,
 }: Readonly<{
   children: React.ReactNode;
-  params: { workspace: string; conversationId: string };
+  params: Promise<{ workspace: string; conversationId: string }>;
 }>) {
+  const params = await paramsPromise;
   const { conversationId, workspace } = await params;
   const slug = decodeURIComponent(workspace);
   const data: currentConversationProps = await getCurrentConversation(

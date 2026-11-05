@@ -33,7 +33,7 @@ export async function downloadAndProgress(
   }
   if (signal?.aborted) return;
   const mime = res.headers["content-type"] || "application/octet-stream";
-  const blob = new Blob([res.data], { type: mime });
+  const blob = new Blob([res.data], { type: String(mime) });
   const blobUrl = URL.createObjectURL(blob);
 
   const a = document.createElement("a");

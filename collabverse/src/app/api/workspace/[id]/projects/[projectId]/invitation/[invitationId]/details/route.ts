@@ -10,9 +10,10 @@ export const GET = withAuth(
     user: User,
     req: Request,
     {
-      params,
-    }: { params: { id: string; projectId: string; invitationId: string } },
+      params: paramsPromise,
+    }: { params: Promise<{ id: string; projectId: string; invitationId: string }> },
   ) => {
+    const params = await paramsPromise;
     const workspaceId = params.id;
     const projectId = params.projectId;
     const invitationId = params.invitationId;

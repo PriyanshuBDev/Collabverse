@@ -32,7 +32,8 @@ type statusProp = {
 };
 
 export const GET = withAuth(
-  async (user: User, req: Request, { params }: { params: { id: string } }) => {
+  async (user: User, req: Request, { params: paramsPromise }: { params: Promise<{ id: string }> }) => {
+    const params = await paramsPromise;
     const workspaceId = params.id;
     const take = 5;
     if (!workspaceId) {

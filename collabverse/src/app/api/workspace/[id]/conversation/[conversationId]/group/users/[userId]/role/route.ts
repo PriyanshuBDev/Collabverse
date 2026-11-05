@@ -15,9 +15,10 @@ export const PATCH = withAuth(
     user: User,
     req: Request,
     {
-      params,
-    }: { params: { id: string; conversationId: string; userId: string } },
+      params: paramsPromise,
+    }: { params: Promise<{ id: string; conversationId: string; userId: string }> },
   ) => {
+    const params = await paramsPromise;
     const workspaceId = params.id;
     const conversationId = params.conversationId;
     const userId = params.userId;

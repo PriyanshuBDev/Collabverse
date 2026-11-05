@@ -11,14 +11,15 @@ export const GET = withAuth(
     user: User,
     req: Request,
     {
-      params,
+      params: paramsPromise,
     }: {
-      params: {
+      params: Promise<{
         id: string;
         activityId: string;
-      };
+      }>;
     },
   ) => {
+    const params = await paramsPromise;
     const workspaceId = params.id;
     const activityId = params.activityId;
     if (!workspaceId || !activityId) {

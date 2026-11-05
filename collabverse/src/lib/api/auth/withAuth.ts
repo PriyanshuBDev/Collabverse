@@ -4,7 +4,7 @@ import { requireUser } from "./requireUser";
 import type { User } from "@supabase/supabase-js";
 
 type RouteContext<TParams extends Record<string, string>> = {
-  params: TParams;
+  params: Promise<TParams>;
 };
 
 export function withAuth<
@@ -23,7 +23,7 @@ export function withAuth<
     try {
       const user = await requireUser();
       const resolvedContext = {
-        params: await context.params,
+        params: context.params,
       };
       return handler(user, req, resolvedContext);
     } catch {

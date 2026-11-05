@@ -4,7 +4,8 @@ import { wsRole } from "@/lib/serviceLayer/workspace/wsRole";
 import { User } from "@supabase/supabase-js";
 
 export const GET = withAuth(
-  async (user: User, req: Request, { params }: { params: { id: string } }) => {
+  async (user: User, req: Request, { params: paramsPromise }: { params: Promise<{ id: string }> }) => {
+    const params = await paramsPromise;
     const workspaceId = params.id;
     if (!workspaceId) {
       return new Response("Required params not found", { status: 400 });

@@ -9,8 +9,9 @@ export const GET = withAuth(
   async (
     user: User,
     req: Request,
-    { params }: { params: { id: string; callId: string } },
+    { params: paramsPromise }: { params: Promise<{ id: string; callId: string }> },
   ) => {
+    const params = await paramsPromise;
     const workspaceId = params.id;
     const callId = params.callId;
     if (!workspaceId || !callId) {

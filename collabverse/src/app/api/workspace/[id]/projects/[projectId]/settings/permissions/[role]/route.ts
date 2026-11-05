@@ -29,20 +29,24 @@ export const PATCH = withAuth(
     user: User,
     req: Request,
     {
-      params,
+      params: paramsPromise,
     }: {
-      params: {
+      params: Promise<{
         id: string;
         projectId: string;
-        role: "Manager" | "Contributor" | "Viewer";
-      };
+        role: string;
+      }>;
     },
   ) => {
+    const params = await paramsPromise;
     const workspaceId = params.id;
     const projectId = params.projectId;
     const role = params.role;
     if (!workspaceId || !projectId || !role) {
       return apiError("Invalid parameters", 400);
+    }
+    if (!Object.hasOwn(ROLE_PERMISSIONS, role)) {
+      return apiError("Invalid data", 400);
     }
     const body = await req.json();
     try {

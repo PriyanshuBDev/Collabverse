@@ -9,8 +9,9 @@ export const GET = withAuth(
   async (
     user: User,
     req: Request,
-    { params }: { params: { notificationId: string } },
+    { params: paramsPromise }: { params: Promise<{ notificationId: string }> },
   ) => {
+    const params = await paramsPromise;
     const notificationId = params.notificationId;
     if (!notificationId) {
       return apiErrorCustom("Invalid parameters");

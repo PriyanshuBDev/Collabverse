@@ -1,7 +1,6 @@
 "use client";
 
 import useMounted from "@/lib/hooks/useMounted";
-import { useUserAppbar } from "@/lib/queries/user/useUserAppbar";
 import { useTheme } from "next-themes";
 
 export default function ThemeToggler() {
@@ -10,13 +9,15 @@ export default function ThemeToggler() {
   const mounted = useMounted();
 
   if (!mounted) return null;
+  const isDark = resolvedTheme === "dark";
   const handleThemeChange = async () => {
     // if (isTogglingTheme) return;
     const theme = isDark ? "light" : "dark";
     setTheme(theme);
+    // localStorage.setItem("theme", theme);
     // toggleTheme({ theme: theme === "dark" ? "Dark" : "Light" });
   };
-  const isDark = resolvedTheme === "dark";
+
   return (
     <label className="themeToggle st-sunMoonThemeToggleBtn w-6 h-6 ">
       <input

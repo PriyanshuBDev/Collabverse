@@ -15,8 +15,9 @@ export const GET = withAuth(
   async (
     user: User,
     req: Request,
-    { params }: { params: { slug: string } },
+    { params: paramsPromise }: { params: Promise<{ slug: string }> },
   ) => {
+    const params = await paramsPromise;
     const slug = params.slug;
     if (!slug) {
       return new Response("Invalid parameter", { status: 400 });

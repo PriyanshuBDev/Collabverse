@@ -10,8 +10,9 @@ export const PATCH = withAuth(
   async (
     user: User,
     req: Request,
-    { params }: { params: { id: string; projectId: string; taskId: string } },
+    { params: paramsPromise }: { params: Promise<{ id: string; projectId: string; taskId: string }> },
   ) => {
+    const params = await paramsPromise;
     const workspaceId = params.id;
     const taskId = params.taskId;
     const projectId = params.projectId;

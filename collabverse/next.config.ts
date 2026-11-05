@@ -3,6 +3,9 @@ import path from "path";
 
 const nextConfig: NextConfig = {
   images: {
+    // Load remote images directly in the browser to avoid server-side
+    // optimizer timeouts when Supabase Storage is slow to respond.
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
