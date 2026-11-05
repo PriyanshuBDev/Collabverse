@@ -40,7 +40,7 @@ function getSpriteSrc(layer: Layer, textureId: string | null) {
   const asset = characterAssets[layer].find(
     (item: assetProps) => item.id === textureId,
   );
-  return asset ? `/character/${layer}/${asset.file}` : undefined;
+  return asset ? `/Character/${layer}/${asset.file}` : undefined;
 }
 
 function getIdleFrame(direction: Direction, frameIndex: number) {

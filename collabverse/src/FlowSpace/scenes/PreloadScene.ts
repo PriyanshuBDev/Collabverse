@@ -77,9 +77,9 @@ export default class PreloadScene extends Phaser.Scene {
         );
       }
     });
-    this.load.tilemapTiledJSON("worldMap", "/map/MapPhaser.tmj");
+    this.load.tilemapTiledJSON("worldMap", "/map/FullMap.tmj");
     for (const [type, assets] of Object.entries(characterAssets)) {
-      const folder = `/character/${type}/`;
+      const folder = `/Character/${type}/`;
       for (const asset of assets) {
         this.load.image(asset.id, `${folder}${asset.file}`);
       }

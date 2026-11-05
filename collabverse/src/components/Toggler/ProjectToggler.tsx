@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction, useEffect } from "react";
 import Toggles from "./Toggles";
+import { useProjectRole } from "@/lib/queries/workspace/project/useProjectRole";
 export interface tabsProps {
   key: string;
   label: string;
@@ -15,18 +16,23 @@ export default function ProjectToggler({
   setSelected: Dispatch<SetStateAction<string | null>>;
   id: string;
 }) {
+  const { data } = useProjectRole();
   const tabs: tabsProps[] = [
     { key: "overview", label: "Overview" },
     { key: "users", label: "Users" },
     { key: "tasks", label: "Tasks" },
     { key: "flowspace", label: "Flowspace" },
     { key: "settings", label: "Settings" },
-  ];
+  ].filter((tab: tabsProps) => !(!data?.role && tab.key === "flowspace"));
   useEffect(() => {
     const last = localStorage.getItem(`P${id}Tab`);
-    const tab = last ?? "overview";
+    const tab = last
+      ? last === "flowspace" && data && !data?.role
+        ? "overview"
+        : last
+      : "overview";
     setSelected(tab);
-  }, [id, setSelected]);
+  }, [id, setSelected, data]);
   return (
     <div className=" border-gray-200 dark:border-gray-700 w-full flex items-center md:gap-10 gap-5 px-5">
       {tabs.map((t: tabsProps, idx: number) => (

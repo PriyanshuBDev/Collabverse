@@ -10,7 +10,12 @@ export async function findDmConvo({
   userId: string;
 }) {
   const res = await api.get<findDmProps>(
-    `/api/workspace/${workspaceId}/conversation/find/${userId}`,
+    `/api/workspace/${workspaceId}/conversation/dm/find`,
+    {
+      params: {
+        userId,
+      },
+    },
   );
   return res.data;
 }
