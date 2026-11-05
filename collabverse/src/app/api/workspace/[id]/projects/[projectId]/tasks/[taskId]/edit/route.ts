@@ -6,7 +6,6 @@ import {
 } from "@/lib/functions/error/apiError";
 import { User } from "@supabase/supabase-js";
 import z from "zod";
-import { nameSchema } from "../../../../create/route";
 import { Priority, Prisma, TaskStatus } from "@prisma/client";
 import { taskAuthority } from "@/lib/serviceLayer/task/taskAuthority";
 import { prisma } from "@/lib/db/prisma";
@@ -20,8 +19,9 @@ import {
   taskEditResProps,
 } from "@/app/interfaces";
 import { taskPatch_notification } from "@/lib/functions/notifications/notifications";
+import { nameSchema } from "@/lib/functions/route/nameSchema";
 
-export const editTaskSchema = z.object({
+const editTaskSchema = z.object({
   name: nameSchema.optional(),
   description: z.string().max(1000).optional().nullable(),
   status: z.enum(TaskStatus).optional(),
@@ -32,7 +32,9 @@ export const PATCH = withAuth(
   async (
     user: User,
     req: Request,
-    { params: paramsPromise }: { params: Promise<{ id: string; projectId: string; taskId: string }> },
+    {
+      params: paramsPromise,
+    }: { params: Promise<{ id: string; projectId: string; taskId: string }> },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;

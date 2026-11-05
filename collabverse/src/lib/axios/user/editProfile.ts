@@ -3,10 +3,13 @@ import api from "@/lib/axios";
 import axios from "axios";
 import { removeAvatar } from "../upload/removeAvatar";
 import { z } from "zod";
-import { editProfileSchema } from "@/app/api/user/profile/edit/route";
 import uploadAvatar from "../upload/uploadAvatar";
 import { editedUserProps, editProfileResponse } from "@/app/interfaces";
-
+export const editProfileSchema = z.object({
+  name: z.string().min(6).max(25).optional(),
+  username: z.string().min(3).max(20).optional(),
+  bio: z.string().max(150).nullable().optional(),
+});
 type EditProfilePayload = z.infer<typeof editProfileSchema>;
 interface props {
   id: string;

@@ -12,7 +12,7 @@ import { wsRole } from "@/lib/serviceLayer/workspace/wsRole";
 import { $Enums } from "@prisma/client";
 import { User } from "@supabase/supabase-js";
 import z from "zod";
-export const forwardMsgsSchema = z.object({
+const forwardMsgsSchema = z.object({
   msgs: z
     .array(
       z.object({
@@ -66,7 +66,9 @@ export const POST = withAuth(
   async (
     user: User,
     req: Request,
-    { params: paramsPromise }: { params: Promise<{ id: string; conversationId: string }> },
+    {
+      params: paramsPromise,
+    }: { params: Promise<{ id: string; conversationId: string }> },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;

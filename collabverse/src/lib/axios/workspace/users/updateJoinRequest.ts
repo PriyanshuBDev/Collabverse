@@ -1,6 +1,8 @@
 import z from "zod";
 import api from "../..";
-import { joinRequestSchema } from "@/app/api/workspace/[id]/users/join-requests/[reqId]/route";
+export const joinRequestSchema = z.object({
+  status: z.enum(["Approved", "Rejected"]),
+});
 export type joinReqStatus = z.infer<typeof joinRequestSchema>["status"];
 export async function updateJoinRequest({
   workspaceId,

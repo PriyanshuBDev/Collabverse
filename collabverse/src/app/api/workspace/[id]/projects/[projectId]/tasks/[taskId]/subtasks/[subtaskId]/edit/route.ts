@@ -6,11 +6,11 @@ import {
 } from "@/lib/functions/error/apiError";
 import { User } from "@supabase/supabase-js";
 import z from "zod";
-import { nameSchema } from "@/app/api/workspace/[id]/projects/create/route";
 import { prisma } from "@/lib/db/prisma";
 import { taskAuthority } from "@/lib/serviceLayer/task/taskAuthority";
+import { nameSchema } from "@/lib/functions/route/nameSchema";
 
-export const subtaskEditSchema = z.object({
+const subtaskEditSchema = z.object({
   name: nameSchema.optional(),
   description: z.string().max(1000).optional().nullable(),
 });

@@ -4,7 +4,7 @@ import { zodApiError } from "@/lib/functions/error/apiError";
 import { User } from "@supabase/supabase-js";
 import z from "zod";
 
-export const patchUserAppearanceSchema = z.object({
+const patchUserAppearanceSchema = z.object({
   body: z.string().regex(/^body-(?:0[1-9])$/),
   hairstyle: z.string().regex(/^hairstyle-(?:0[1-9]|[1-9]\d|1\d\d|200)$/),
   outfit: z.string().regex(/^outfit-(?:0[1-9]|[1-9]\d|1[0-2]\d|132)$/),

@@ -1,14 +1,10 @@
 import { withAuth } from "@/lib/api/auth/withAuth";
+import { editProfileSchema } from "@/lib/axios/user/editProfile";
 import { prisma } from "@/lib/db/prisma";
 import { Prisma } from "@prisma/client";
 import { User } from "@supabase/supabase-js";
-import { z, ZodError } from "zod";
+import { ZodError } from "zod";
 
-export const editProfileSchema = z.object({
-  name: z.string().min(6).max(25).optional(),
-  username: z.string().min(3).max(20).optional(),
-  bio: z.string().max(150).nullable().optional(),
-});
 export const POST = withAuth(async (user: User, req: Request) => {
   const data = await req.json();
   try {

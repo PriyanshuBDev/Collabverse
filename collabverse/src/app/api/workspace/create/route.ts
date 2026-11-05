@@ -1,10 +1,10 @@
 import { withAuth } from "@/lib/api/auth/withAuth";
+import { nameSchema } from "@/lib/functions/route/nameSchema";
 
 import { createWorkspaceService } from "@/lib/serviceLayer/workspace/createWorkspaceService";
 import { User } from "@supabase/supabase-js";
 import z, { ZodError } from "zod";
-import { nameSchema } from "../[id]/projects/create/route";
-export const wsCreateSchema = z.object({
+const wsCreateSchema = z.object({
   name: nameSchema,
   description: z.string().max(1000).optional(),
 });

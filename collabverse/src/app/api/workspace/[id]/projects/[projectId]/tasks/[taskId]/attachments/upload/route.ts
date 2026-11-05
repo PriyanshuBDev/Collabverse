@@ -8,7 +8,7 @@ import {
 import { taskAuthority } from "@/lib/serviceLayer/task/taskAuthority";
 import { User } from "@supabase/supabase-js";
 import z from "zod";
-export const FileTypeEnumSchema = z.enum([
+const FileTypeEnumSchema = z.enum([
   "image/jpeg",
   "image/svg+xml",
   "image/png",
@@ -41,7 +41,7 @@ type attachProp = {
   size: number;
   format: string;
 };
-export const createAttachmentSchema = z.object({
+const createAttachmentSchema = z.object({
   files: z.array(
     z.object({
       originalName: z.string(),
@@ -60,7 +60,9 @@ export const POST = withAuth(
   async (
     user: User,
     req: Request,
-    { params: paramsPromise }: { params: Promise<{ id: string; projectId: string; taskId: string }> },
+    {
+      params: paramsPromise,
+    }: { params: Promise<{ id: string; projectId: string; taskId: string }> },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;

@@ -16,7 +16,7 @@ import { Prisma, TaskStatus } from "@prisma/client";
 import { User } from "@supabase/supabase-js";
 import z from "zod";
 
-export const taskPositionSchema = z.object({
+const taskPositionSchema = z.object({
   status: z.enum(TaskStatus),
 });
 
@@ -24,7 +24,9 @@ export const PATCH = withAuth(
   async (
     user: User,
     req: Request,
-    { params: paramsPromise }: { params: Promise<{ id: string; projectId: string; taskId: string }> },
+    {
+      params: paramsPromise,
+    }: { params: Promise<{ id: string; projectId: string; taskId: string }> },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;

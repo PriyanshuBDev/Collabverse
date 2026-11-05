@@ -13,7 +13,7 @@ import { wsRole } from "@/lib/serviceLayer/workspace/wsRole";
 import { $Enums, MessageType } from "@prisma/client";
 import { User } from "@supabase/supabase-js";
 import z from "zod";
-export const createMsgSchema = z.object({
+const createMsgSchema = z.object({
   msg: z.object({
     clientId: z.uuid(),
     type: z.enum(MessageType),
@@ -85,7 +85,9 @@ export const POST = withAuth(
   async (
     user: User,
     req: Request,
-    { params: paramsPromise }: { params: Promise<{ id: string; conversationId: string }> },
+    {
+      params: paramsPromise,
+    }: { params: Promise<{ id: string; conversationId: string }> },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;
@@ -318,7 +320,7 @@ export const POST = withAuth(
     }
   },
 );
-export function createReplyPreview(reply: replyMsg): ReplyPreview {
+function createReplyPreview(reply: replyMsg): ReplyPreview {
   const replyMedia = reply.media.at(0);
   return {
     id: reply.id,

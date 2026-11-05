@@ -18,7 +18,7 @@ type rowProps = {
     };
   };
 };
-export const getGroupUsersSchema = z.object({
+const getGroupUsersSchema = z.object({
   cursorId: z.uuid().optional(),
   search: z.string().min(2).optional(),
 });
@@ -26,7 +26,9 @@ export const GET = withAuth(
   async (
     user: User,
     req: Request,
-    { params: paramsPromise }: { params: Promise<{ id: string; conversationId: string }> },
+    {
+      params: paramsPromise,
+    }: { params: Promise<{ id: string; conversationId: string }> },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;

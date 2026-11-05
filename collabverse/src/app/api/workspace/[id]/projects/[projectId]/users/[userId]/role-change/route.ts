@@ -1,4 +1,5 @@
 import { withAuth } from "@/lib/api/auth/withAuth";
+import { projectRoleSchema } from "@/lib/axios/workspace/project/users/roleChangeProjectUser";
 import { prisma } from "@/lib/db/prisma";
 import { apiError, apiErrorCustom } from "@/lib/functions/error/apiError";
 import { project_role_change_notification } from "@/lib/functions/notifications/notifications";
@@ -7,17 +8,15 @@ import { hasPermInProject } from "@/lib/serviceLayer/project/hasPermInProject";
 import { projectRole } from "@/lib/serviceLayer/project/projectRole";
 import { wsRole } from "@/lib/serviceLayer/workspace/wsRole";
 import { User } from "@supabase/supabase-js";
-import z, { ZodError } from "zod";
-
-export const projectRoleSchema = z.object({
-  role: z.enum(["Manager", "Contributor", "Viewer"]),
-});
+import { ZodError } from "zod";
 
 export const PATCH = withAuth(
   async (
     user: User,
     req: Request,
-    { params: paramsPromise }: { params: Promise<{ id: string; projectId: string; userId: string }> },
+    {
+      params: paramsPromise,
+    }: { params: Promise<{ id: string; projectId: string; userId: string }> },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;

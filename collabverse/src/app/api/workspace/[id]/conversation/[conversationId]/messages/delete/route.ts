@@ -17,7 +17,7 @@ type senderAndIdProp = {
   id: string;
   senderId: string | null;
 };
-export const msgsDeleteSchema = z.object({
+const msgsDeleteSchema = z.object({
   msgs: z
     .array(
       z.object({
@@ -32,7 +32,9 @@ export const PATCH = withAuth(
   async (
     user: User,
     req: Request,
-    { params: paramsPromise }: { params: Promise<{ id: string; conversationId: string }> },
+    {
+      params: paramsPromise,
+    }: { params: Promise<{ id: string; conversationId: string }> },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;

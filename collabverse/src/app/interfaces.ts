@@ -1015,6 +1015,11 @@ export interface allConversationResProps {
   users: memberProps[];
   convo: { type: "Dm" } | { type: "Group"; status: ConvMemberStatus };
 }
+export interface upcomingTasksResProps {
+  items: upcomingTasksProps[];
+  nextCursor: dueDateCursorProps | null;
+  hasMore: boolean;
+}
 export type eventType = "INSERT" | "UPDATE" | "DELETE";
 export interface getGroupUsersResProps {
   users: groupUsersProps[];

@@ -1,10 +1,6 @@
+import { signUpSchema } from "@/lib/axios/user/signup";
 import { prisma } from "@/lib/db/prisma";
-import { z, ZodError } from "zod";
-
-export const signUpSchema = z.object({
-  id: z.string().uuid({ message: "Invalid user id" }),
-  email: z.string().email({ message: "Invalid email" }),
-});
+import { ZodError } from "zod";
 
 export async function POST(req: Request) {
   const data = await req.json();

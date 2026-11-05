@@ -1,5 +1,5 @@
+import { upcomingTasksResProps } from "@/app/interfaces";
 import api from "@/lib/axios";
-import { upcomingTasksResProps } from "@/app/api/workspace/[id]/overview/upcoming-tasks/route";
 
 export async function getUpcomingTasks(
   id: string,

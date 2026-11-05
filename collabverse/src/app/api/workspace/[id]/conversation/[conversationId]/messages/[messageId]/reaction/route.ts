@@ -4,29 +4,22 @@ import { apiErrorCustom, zodApiError } from "@/lib/functions/error/apiError";
 import { convoMembership } from "@/lib/serviceLayer/conversation/convoMembership";
 import { wsRole } from "@/lib/serviceLayer/workspace/wsRole";
 import { User } from "@supabase/supabase-js";
-import z from "zod";
-import emojiRegex from "emoji-regex";
 import { prismaTransactionProp } from "@/app/interfaces";
-const regex = emojiRegex();
+import { reactionSchema } from "@/lib/functions/route/reactionSchema";
 
-export const reactionSchema = z.object({
-  reaction: z.string().refine(
-    (value) => {
-      const matches = value.match(regex);
-      return matches?.length === 1 && matches[0] === value;
-    },
-    {
-      message: "Invalid emoji",
-    },
-  ),
-});
 export const PATCH = withAuth(
   async (
     user: User,
     req: Request,
     {
       params: paramsPromise,
-    }: { params: Promise<{ id: string; conversationId: string; messageId: string }> },
+    }: {
+      params: Promise<{
+        id: string;
+        conversationId: string;
+        messageId: string;
+      }>;
+    },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;

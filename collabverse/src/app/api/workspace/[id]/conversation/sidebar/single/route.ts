@@ -5,11 +5,15 @@ import { apiErrorCustom, zodApiError } from "@/lib/functions/error/apiError";
 import { wsRole } from "@/lib/serviceLayer/workspace/wsRole";
 import { User } from "@supabase/supabase-js";
 import z from "zod";
-export const convoSidebarSchema = z.object({
+const convoSidebarSchema = z.object({
   conversationId: z.uuid().optional(),
 });
 export const GET = withAuth(
-  async (user: User, req: Request, { params: paramsPromise }: { params: Promise<{ id: string }> }) => {
+  async (
+    user: User,
+    req: Request,
+    { params: paramsPromise }: { params: Promise<{ id: string }> },
+  ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;
     if (!workspaceId) {

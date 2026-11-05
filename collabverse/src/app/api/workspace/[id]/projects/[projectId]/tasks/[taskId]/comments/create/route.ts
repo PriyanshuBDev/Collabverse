@@ -6,7 +6,7 @@ import { commentReplyPrivew } from "@/lib/hooks/zustand/Comments/useTaskCommentS
 import { User } from "@supabase/supabase-js";
 import z from "zod";
 
-export const createCommentSchema = z.object({
+const createCommentSchema = z.object({
   comment: z.object({
     clientId: z.uuid(),
     replyToCommentId: z.string().nullable(),
@@ -20,7 +20,9 @@ export const POST = withAuth(
   async (
     user: User,
     req: Request,
-    { params: paramsPromise }: { params: Promise<{ id: string; projectId: string; taskId: string }> },
+    {
+      params: paramsPromise,
+    }: { params: Promise<{ id: string; projectId: string; taskId: string }> },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;

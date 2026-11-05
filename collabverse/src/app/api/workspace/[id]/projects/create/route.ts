@@ -2,24 +2,13 @@ import { projInviteRolesConst } from "@/app/interfaces";
 import { withAuth } from "@/lib/api/auth/withAuth";
 import { prisma } from "@/lib/db/prisma";
 import { apiErrorCustom, zodApiError } from "@/lib/functions/error/apiError";
+import { nameSchema } from "@/lib/functions/route/nameSchema";
 import { findPermission } from "@/lib/functions/workspace/findPermission";
 import { createProjectService } from "@/lib/serviceLayer/project/createProjectService";
 import { User } from "@supabase/supabase-js";
 import z from "zod";
-export const nameSchema = z
-  .string()
-  .min(6, "Name must be atleast 6 characters")
-  .max(25, "Name must be at most 25 characters")
-  .refine((val) => !val.startsWith(" "), {
-    message: "Name cannot start with a space",
-  })
-  .refine((val) => !val.includes("   "), {
-    message: "Name cannot contain triple spaces",
-  })
-  .regex(/^[\p{L}\p{N}\p{Emoji_Presentation}\s._-]+$/u, {
-    message: "Name contains invalid characters",
-  });
-export const projectCreateSchema = z.object({
+
+const projectCreateSchema = z.object({
   name: nameSchema,
   description: z.string().max(1000).optional(),
   dueDate: z.coerce.date().optional(),
@@ -34,7 +23,11 @@ export const projectCreateSchema = z.object({
 });
 
 export const POST = withAuth(
-  async (user: User, req: Request, { params: paramsPromise }: { params: Promise<{ id: string }> }) => {
+  async (
+    user: User,
+    req: Request,
+    { params: paramsPromise }: { params: Promise<{ id: string }> },
+  ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;
     if (!workspaceId) {

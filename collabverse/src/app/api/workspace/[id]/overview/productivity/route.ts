@@ -14,11 +14,15 @@ type taskProp = {
   dueDate: Date;
   completedAt: Date | null;
 };
-export const timePeriodSchema = z.object({
+const timePeriodSchema = z.object({
   timePeriod: z.enum(["Week", "Month"]),
 });
 export const GET = withAuth(
-  async (user: User, req: Request, { params: paramsPromise }: { params: Promise<{ id: string }> }) => {
+  async (
+    user: User,
+    req: Request,
+    { params: paramsPromise }: { params: Promise<{ id: string }> },
+  ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;
     const { searchParams } = new URL(req.url);

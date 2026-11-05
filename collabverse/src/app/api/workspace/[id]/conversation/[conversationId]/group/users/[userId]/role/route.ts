@@ -7,7 +7,7 @@ import { wsRole } from "@/lib/serviceLayer/workspace/wsRole";
 import { GroupRole } from "@prisma/client";
 import { User } from "@supabase/supabase-js";
 import z from "zod";
-export const groupRoleSchema = z.object({
+const groupRoleSchema = z.object({
   role: z.enum([GroupRole.Admin, GroupRole.Member]),
 });
 export const PATCH = withAuth(
@@ -16,7 +16,9 @@ export const PATCH = withAuth(
     req: Request,
     {
       params: paramsPromise,
-    }: { params: Promise<{ id: string; conversationId: string; userId: string }> },
+    }: {
+      params: Promise<{ id: string; conversationId: string; userId: string }>;
+    },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;

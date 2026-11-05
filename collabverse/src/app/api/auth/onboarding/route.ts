@@ -3,17 +3,8 @@ import { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/db/prisma";
 import type { User } from "@supabase/supabase-js";
 import { z, ZodError } from "zod";
+import { usernameSchema } from "@/lib/functions/route/usernameSchema";
 
-export const usernameSchema = z
-  .string()
-  .min(3)
-  .max(20)
-  .trim()
-  .toLowerCase()
-  .regex(/^@[a-z0-9]+(?:[._][a-z0-9]+)*$/, {
-    message:
-      "Username must start with @ and can contain lowercase letters, numbers, dots, or underscores (no consecutive or trailing symbols).",
-  });
 const onboardingSchema = z.object({
   name: z
     .string()

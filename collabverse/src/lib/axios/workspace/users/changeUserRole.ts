@@ -1,4 +1,3 @@
-import { wsRoleSchema } from "@/app/api/workspace/[id]/users/[userId]/role-change/route";
 import z from "zod";
 import { AuthParamExistsNormal } from "../../errors/AuthParamExistsNormal";
 import api from "@/lib/axios";
@@ -11,7 +10,11 @@ import {
   projectRoleChange,
   roleChangeProjectUser,
 } from "../project/users/roleChangeProjectUser";
+import { WsRole } from "@prisma/client";
 
+export const wsRoleSchema = z.object({
+  role: z.enum([WsRole.Admin, WsRole.Member]),
+});
 export type wsRoleChange = z.infer<typeof wsRoleSchema>["role"];
 export async function changeUserRole({
   role,

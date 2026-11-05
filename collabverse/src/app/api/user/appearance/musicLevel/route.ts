@@ -3,7 +3,7 @@ import { prisma } from "@/lib/db/prisma";
 import { zodApiError } from "@/lib/functions/error/apiError";
 import { User } from "@supabase/supabase-js";
 import z from "zod";
-export const patchMusicLevel = z.object({
+const patchMusicLevel = z.object({
   level: z.number().max(5).min(0),
 });
 export const PATCH = withAuth(async (user: User, req: Request) => {

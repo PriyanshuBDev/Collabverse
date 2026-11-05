@@ -2,11 +2,11 @@ import { ProjectMembersProps, projMemberUserIdProp } from "@/app/interfaces";
 import { withAuth } from "@/lib/api/auth/withAuth";
 import { prisma } from "@/lib/db/prisma";
 import { apiErrorCustom, zodApiError } from "@/lib/functions/error/apiError";
+import { cursorSearchSchema } from "@/lib/functions/route/cursorSearchSchema";
 import { projectRole } from "@/lib/serviceLayer/project/projectRole";
 import { wsRole } from "@/lib/serviceLayer/workspace/wsRole";
 import { $Enums } from "@prisma/client";
 import { User } from "@supabase/supabase-js";
-import z from "zod";
 type prop = {
   role: $Enums.PRole;
   workspaceMember: {
@@ -18,16 +18,14 @@ type prop = {
     };
   };
 };
-export const cursorSearchSchema = z.object({
-  search: z.string().trim().min(2).optional(),
-  cursor: z.uuid().optional(),
-});
 
 export const GET = withAuth(
   async (
     user: User,
     req: Request,
-    { params: paramsPromise }: { params: Promise<{ id: string; projectId: string; taskId: string }> },
+    {
+      params: paramsPromise,
+    }: { params: Promise<{ id: string; projectId: string; taskId: string }> },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;

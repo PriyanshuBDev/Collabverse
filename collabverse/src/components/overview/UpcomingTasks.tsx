@@ -5,9 +5,8 @@ import HomeWrapper from "../wrappers/HomeWrapper";
 import { useUpcomingTasks } from "@/lib/queries/workspace/overview/useUpcomingTasks";
 import { useIsErrorToast } from "@/lib/hooks/useIsErrorToast";
 import { useInfiniteScroll } from "@/lib/hooks/useInfiniteScroll";
-import { upcomingTasksProps } from "@/app/interfaces";
+import { upcomingTasksProps, upcomingTasksResProps } from "@/app/interfaces";
 import Spinner1 from "../loadings/Spinner1";
-import { upcomingTasksResProps } from "@/app/api/workspace/[id]/overview/upcoming-tasks/route";
 
 export default function UpcomingTasks() {
   const {

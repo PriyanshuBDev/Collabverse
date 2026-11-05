@@ -13,7 +13,7 @@ import { PRole } from "@prisma/client";
 import { User } from "@supabase/supabase-js";
 import z from "zod";
 
-export const projectInvitationSchema = z.object({
+const projectInvitationSchema = z.object({
   response: z.enum(["Accept", "Decline"]),
 });
 
@@ -23,7 +23,9 @@ export const POST = withAuth(
     req: Request,
     {
       params: paramsPromise,
-    }: { params: Promise<{ id: string; projectId: string; invitationId: string }> },
+    }: {
+      params: Promise<{ id: string; projectId: string; invitationId: string }>;
+    },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;

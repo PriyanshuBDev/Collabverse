@@ -7,7 +7,7 @@ import { Prisma, TaskStatus } from "@prisma/client";
 import { User } from "@supabase/supabase-js";
 import z from "zod";
 
-export const taskReorderSchema = z.object({
+const taskReorderSchema = z.object({
   prevId: z.uuid().optional(),
   nextId: z.uuid().optional(),
   status: z.enum(TaskStatus),
@@ -17,7 +17,9 @@ export const PATCH = withAuth(
   async (
     user: User,
     req: Request,
-    { params: paramsPromise }: { params: Promise<{ id: string; projectId: string; taskId: string }> },
+    {
+      params: paramsPromise,
+    }: { params: Promise<{ id: string; projectId: string; taskId: string }> },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;
@@ -113,7 +115,7 @@ export const PATCH = withAuth(
   },
 );
 
-export async function rebalanceColumn(
+async function rebalanceColumn(
   tx: Prisma.TransactionClient,
   projectId: string,
   status: TaskStatus,

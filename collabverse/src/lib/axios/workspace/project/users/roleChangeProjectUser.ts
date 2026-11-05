@@ -1,11 +1,12 @@
-import { projectRoleSchema } from "@/app/api/workspace/[id]/projects/[projectId]/users/[userId]/role-change/route";
 import api from "@/lib/axios";
 import { AuthParamExistsNormal } from "@/lib/axios/errors/AuthParamExistsNormal";
 import axios from "axios";
 import z from "zod";
 import { roleChangeTaskUser } from "../tasks/users/roleChangeTaskUser";
 import { TaskRole } from "@prisma/client";
-
+export const projectRoleSchema = z.object({
+  role: z.enum(["Manager", "Contributor", "Viewer"]),
+});
 export type projectRoleChange = z.infer<typeof projectRoleSchema>["role"];
 
 export async function roleChangeProjectUser({

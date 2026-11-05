@@ -7,17 +7,16 @@ import { User } from "@supabase/supabase-js";
 import { addDays } from "date-fns";
 import z from "zod";
 
-export interface upcomingTasksResProps {
-  items: upcomingTasksProps[];
-  nextCursor: dueDateCursorProps | null;
-  hasMore: boolean;
-}
-export const upcomingTasksSchema = z.object({
+const upcomingTasksSchema = z.object({
   cursorDueDate: z.coerce.date().optional(),
   cursorId: z.uuid().optional(),
 });
 export const GET = withAuth(
-  async (user: User, req: Request, { params: paramsPromise }: { params: Promise<{ id: string }> }) => {
+  async (
+    user: User,
+    req: Request,
+    { params: paramsPromise }: { params: Promise<{ id: string }> },
+  ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;
     const { searchParams } = new URL(req.url);

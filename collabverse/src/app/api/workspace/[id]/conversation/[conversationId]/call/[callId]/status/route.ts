@@ -7,7 +7,7 @@ import { wsRole } from "@/lib/serviceLayer/workspace/wsRole";
 import { CallStatus } from "@prisma/client";
 import { User } from "@supabase/supabase-js";
 import z from "zod";
-export const patchCallSessionSchema = z.object({
+const patchCallSessionSchema = z.object({
   status: z.enum(CallStatus),
 });
 export const PATCH = withAuth(
@@ -16,7 +16,9 @@ export const PATCH = withAuth(
     req: Request,
     {
       params: paramsPromise,
-    }: { params: Promise<{ id: string; conversationId: string; callId: string }> },
+    }: {
+      params: Promise<{ id: string; conversationId: string; callId: string }>;
+    },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;

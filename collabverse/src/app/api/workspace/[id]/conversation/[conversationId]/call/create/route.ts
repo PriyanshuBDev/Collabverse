@@ -7,14 +7,16 @@ import { wsRole } from "@/lib/serviceLayer/workspace/wsRole";
 import { CallType } from "@prisma/client";
 import { User } from "@supabase/supabase-js";
 import z from "zod";
-export const createCallSessionSchema = z.object({
+const createCallSessionSchema = z.object({
   type: z.enum(CallType),
 });
 export const POST = withAuth(
   async (
     user: User,
     req: Request,
-    { params: paramsPromise }: { params: Promise<{ id: string; conversationId: string }> },
+    {
+      params: paramsPromise,
+    }: { params: Promise<{ id: string; conversationId: string }> },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;

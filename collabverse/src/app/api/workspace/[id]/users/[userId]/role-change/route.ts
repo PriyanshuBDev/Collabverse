@@ -1,21 +1,21 @@
 import { withAuth } from "@/lib/api/auth/withAuth";
+import { wsRoleSchema } from "@/lib/axios/workspace/users/changeUserRole";
 import { prisma } from "@/lib/db/prisma";
 import { workspace_role_changed_notification } from "@/lib/functions/notifications/notifications";
 import { revokeInvitationOfWs } from "@/lib/serviceLayer/invitation/revokeInvitation";
 import { hasPermInWorkspace } from "@/lib/serviceLayer/workspace/hasPermInWorkspace";
 import { wsRole } from "@/lib/serviceLayer/workspace/wsRole";
-import { ActivityType, WsRole } from "@prisma/client";
+import { ActivityType } from "@prisma/client";
 import { User } from "@supabase/supabase-js";
-import z, { ZodError } from "zod";
+import { ZodError } from "zod";
 
-export const wsRoleSchema = z.object({
-  role: z.enum([WsRole.Admin, WsRole.Member]),
-});
 export const PATCH = withAuth(
   async (
     user: User,
     req: Request,
-    { params: paramsPromise }: { params: Promise<{ id: string; userId: string }> },
+    {
+      params: paramsPromise,
+    }: { params: Promise<{ id: string; userId: string }> },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;

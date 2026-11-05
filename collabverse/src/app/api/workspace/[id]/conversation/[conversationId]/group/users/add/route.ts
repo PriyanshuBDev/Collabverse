@@ -7,7 +7,7 @@ import { GroupRole } from "@prisma/client";
 import { User } from "@supabase/supabase-js";
 import z from "zod";
 
-export const addUsersToGroupSchema = z.object({
+const addUsersToGroupSchema = z.object({
   users: z.array(
     z.object({
       id: z.uuid(),
@@ -19,7 +19,9 @@ export const POST = withAuth(
   async (
     user: User,
     req: Request,
-    { params: paramsPromise }: { params: Promise<{ id: string; conversationId: string }> },
+    {
+      params: paramsPromise,
+    }: { params: Promise<{ id: string; conversationId: string }> },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;

@@ -4,10 +4,10 @@ import { prisma } from "@/lib/db/prisma";
 import { parseActivityTarget } from "@/lib/functions/activity/parseActivityTarget";
 import { isWorkspaceMember } from "@/lib/serviceLayer/workspace/isWorkspaceMember";
 import { User } from "@supabase/supabase-js";
-import { cursorSchema } from "../../projects/[projectId]/tasks/[taskId]/attachments/route";
 import { apiErrorCustom, zodApiError } from "@/lib/functions/error/apiError";
 import { JsonValue } from "@prisma/client/runtime/client";
 import { $Enums } from "@prisma/client";
+import { cursorSchema } from "@/lib/functions/route/cursorSchema";
 type userIdProp = { userId: string };
 type rowProp = {
   id: string;
@@ -26,7 +26,11 @@ type rowProp = {
   } | null;
 };
 export const GET = withAuth(
-  async (user: User, req: Request, { params: paramsPromise }: { params: Promise<{ id: string }> }) => {
+  async (
+    user: User,
+    req: Request,
+    { params: paramsPromise }: { params: Promise<{ id: string }> },
+  ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;
     const { searchParams } = new URL(req.url);

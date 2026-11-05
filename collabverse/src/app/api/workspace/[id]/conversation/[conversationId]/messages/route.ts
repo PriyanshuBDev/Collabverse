@@ -63,7 +63,7 @@ type rawMsgProps = {
     endedAt: Date | null;
   } | null;
 };
-export const getMessagesSchema = z.object({
+const getMessagesSchema = z.object({
   mode: z.enum(["latest", "before", "after", "around"]),
   cursor: z.uuid().optional(),
 });

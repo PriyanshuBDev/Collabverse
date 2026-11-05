@@ -5,14 +5,14 @@ import {
   zodApiError,
 } from "@/lib/functions/error/apiError";
 import { User } from "@supabase/supabase-js";
-import { nameSchema } from "../../../../../create/route";
 import z from "zod";
 import { prisma } from "@/lib/db/prisma";
 import { projectRole } from "@/lib/serviceLayer/project/projectRole";
 import { taskRole } from "@/lib/serviceLayer/task/taskRole";
 import { subTaskProps } from "@/app/interfaces";
+import { nameSchema } from "@/lib/functions/route/nameSchema";
 
-export const subtaskCreateSchema = z.object({
+const subtaskCreateSchema = z.object({
   name: nameSchema,
   description: z.string().max(1000).optional(),
 });
@@ -21,7 +21,9 @@ export const POST = withAuth(
   async (
     user: User,
     req: Request,
-    { params: paramsPromise }: { params: Promise<{ id: string; projectId: string; taskId: string }> },
+    {
+      params: paramsPromise,
+    }: { params: Promise<{ id: string; projectId: string; taskId: string }> },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;

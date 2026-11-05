@@ -2,10 +2,10 @@ import { memberProps, prismaUserProp } from "@/app/interfaces";
 import { withAuth } from "@/lib/api/auth/withAuth";
 import { prisma } from "@/lib/db/prisma";
 import { apiErrorCustom, zodApiError } from "@/lib/functions/error/apiError";
+import { cursorSearchSchema } from "@/lib/functions/route/cursorSearchSchema";
 import { projectRole } from "@/lib/serviceLayer/project/projectRole";
 import { wsRole } from "@/lib/serviceLayer/workspace/wsRole";
 import { User } from "@supabase/supabase-js";
-import { cursorSearchSchema } from "../../tasks/[taskId]/users/assign/users/route";
 type workspaceMemberId = {
   workspaceMemberUserId: string;
 };
@@ -13,7 +13,9 @@ export const GET = withAuth(
   async (
     user: User,
     req: Request,
-    { params: paramsPromise }: { params: Promise<{ id: string; projectId: string }> },
+    {
+      params: paramsPromise,
+    }: { params: Promise<{ id: string; projectId: string }> },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;

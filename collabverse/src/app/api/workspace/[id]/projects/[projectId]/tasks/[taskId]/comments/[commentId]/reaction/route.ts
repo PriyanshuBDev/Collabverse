@@ -1,8 +1,8 @@
-import { reactionSchema } from "@/app/api/workspace/[id]/conversation/[conversationId]/messages/[messageId]/reaction/route";
 import { prismaTransactionProp } from "@/app/interfaces";
 import { withAuth } from "@/lib/api/auth/withAuth";
 import { prisma } from "@/lib/db/prisma";
 import { apiErrorCustom } from "@/lib/functions/error/apiError";
+import { reactionSchema } from "@/lib/functions/route/reactionSchema";
 import { User } from "@supabase/supabase-js";
 
 export const PATCH = withAuth(

@@ -1,20 +1,18 @@
 import { withAuth } from "@/lib/api/auth/withAuth";
+import { linkWsInviteSchema } from "@/lib/axios/workspace/invitation/getInvitationLink";
 import { prisma } from "@/lib/db/prisma";
 import { apiError, zodApiError } from "@/lib/functions/error/apiError";
 import { generateInviteToken } from "@/lib/functions/invitation/generateInviteToken";
 import { hashToken } from "@/lib/functions/invitation/hashToken";
 import { findPermission } from "@/lib/functions/workspace/findPermission";
-import { WsRole } from "@prisma/client";
 import { User } from "@supabase/supabase-js";
-import z from "zod";
 
-export const linkWsInviteSchema = z.object({
-  maxUses: z.number().min(1).max(100),
-  expireAt: z.coerce.date().optional(),
-  role: z.enum([WsRole.Admin, WsRole.Member]),
-});
 export const POST = withAuth(
-  async (user: User, req: Request, { params: paramsPromise }: { params: Promise<{ id: string }> }) => {
+  async (
+    user: User,
+    req: Request,
+    { params: paramsPromise }: { params: Promise<{ id: string }> },
+  ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;
     if (!workspaceId) {

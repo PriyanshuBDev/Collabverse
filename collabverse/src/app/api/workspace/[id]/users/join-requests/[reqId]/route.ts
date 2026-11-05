@@ -1,20 +1,19 @@
 import { prismaTransactionProp } from "@/app/interfaces";
 import { withAuth } from "@/lib/api/auth/withAuth";
+import { joinRequestSchema } from "@/lib/axios/workspace/users/updateJoinRequest";
 import { prisma } from "@/lib/db/prisma";
 import { workspace_join_notification } from "@/lib/functions/notifications/notifications";
 import { wsRole } from "@/lib/serviceLayer/workspace/wsRole";
 import { User } from "@supabase/supabase-js";
-import z, { ZodError } from "zod";
-
-export const joinRequestSchema = z.object({
-  status: z.enum(["Approved", "Rejected"]),
-});
+import { ZodError } from "zod";
 
 export const PATCH = withAuth(
   async (
     user: User,
     req: Request,
-    { params: paramsPromise }: { params: Promise<{ id: string; reqId: string }> },
+    {
+      params: paramsPromise,
+    }: { params: Promise<{ id: string; reqId: string }> },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;

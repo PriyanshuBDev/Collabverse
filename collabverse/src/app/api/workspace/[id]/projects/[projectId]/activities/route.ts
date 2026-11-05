@@ -4,11 +4,11 @@ import { User } from "@supabase/supabase-js";
 import { prisma } from "@/lib/db/prisma";
 import { activityProps, cursorProps, userIdProp } from "@/app/interfaces";
 import { parseActivityTarget } from "@/lib/functions/activity/parseActivityTarget";
-import { cursorSchema } from "../tasks/[taskId]/attachments/route";
 import { wsRole } from "@/lib/serviceLayer/workspace/wsRole";
 import { projectRole } from "@/lib/serviceLayer/project/projectRole";
 import { JsonValue } from "@prisma/client/runtime/client";
 import { $Enums } from "@prisma/client";
+import { cursorSchema } from "@/lib/functions/route/cursorSchema";
 type resProp = {
   id: string;
   createdAt: Date;
@@ -29,7 +29,9 @@ export const GET = withAuth(
   async (
     user: User,
     req: Request,
-    { params: paramsPromise }: { params: Promise<{ id: string; projectId: string }> },
+    {
+      params: paramsPromise,
+    }: { params: Promise<{ id: string; projectId: string }> },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;

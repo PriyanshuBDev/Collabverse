@@ -39,7 +39,7 @@ type rawCommentProps = {
     };
   } | null;
 };
-export const getCommentsSchema = z.object({
+const getCommentsSchema = z.object({
   mode: z.enum(["latest", "before", "after", "around"]),
   cursor: z.uuid().optional(),
 });

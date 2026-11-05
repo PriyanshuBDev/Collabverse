@@ -25,7 +25,7 @@ type rowProps = {
     avatar: string | null;
   } | null;
 };
-export const getNotificationsSchema = z.object({
+const getNotificationsSchema = z.object({
   cursorId: z.uuid().optional(),
   cursorCreatedAt: z.coerce.date().optional(),
   workspaceId: z.uuid().optional(),

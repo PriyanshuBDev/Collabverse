@@ -1,15 +1,11 @@
 import { withAuth } from "@/lib/api/auth/withAuth";
+import { taskRoleSchema } from "@/lib/axios/workspace/project/tasks/users/roleChangeTaskUser";
 import { prisma } from "@/lib/db/prisma";
 import { task_role_changed_notification } from "@/lib/functions/notifications/notifications";
 import { projectRole } from "@/lib/serviceLayer/project/projectRole";
 import { wsRole } from "@/lib/serviceLayer/workspace/wsRole";
-import { TaskRole } from "@prisma/client";
 import { User } from "@supabase/supabase-js";
-import z, { ZodError } from "zod";
-
-export const taskRoleSchema = z.object({
-  role: z.enum(TaskRole),
-});
+import { ZodError } from "zod";
 
 export const PATCH = withAuth(
   async (
@@ -18,7 +14,12 @@ export const PATCH = withAuth(
     {
       params: paramsPromise,
     }: {
-      params: Promise<{ id: string; projectId: string; taskId: string; userId: string }>;
+      params: Promise<{
+        id: string;
+        projectId: string;
+        taskId: string;
+        userId: string;
+      }>;
     },
   ) => {
     const params = await paramsPromise;

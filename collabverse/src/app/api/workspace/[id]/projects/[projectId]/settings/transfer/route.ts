@@ -1,18 +1,21 @@
 import { withAuth } from "@/lib/api/auth/withAuth";
 import { apiError } from "@/lib/functions/error/apiError";
 import { User } from "@supabase/supabase-js";
-import { ZodError } from "zod";
-import { newOwnerSchema } from "../../../../settings/transfer/route";
+import z, { ZodError } from "zod";
 import { prisma } from "@/lib/db/prisma";
 import { hasPermInProject } from "@/lib/serviceLayer/project/hasPermInProject";
 import { projectTransfer_notification } from "@/lib/functions/notifications/notifications";
 import { prismaTransactionProp, wsMemberUserIdProp } from "@/app/interfaces";
-
+const newOwnerSchema = z.object({
+  newOwnerId: z.string().uuid({ message: "Invalid id" }),
+});
 export const PATCH = withAuth(
   async (
     user: User,
     req: Request,
-    { params: paramsPromise }: { params: Promise<{ id: string; projectId: string }> },
+    {
+      params: paramsPromise,
+    }: { params: Promise<{ id: string; projectId: string }> },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;

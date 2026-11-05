@@ -6,15 +6,15 @@ import {
 } from "@/lib/functions/error/apiError";
 import { User } from "@supabase/supabase-js";
 import z from "zod";
-import { nameSchema } from "../../create/route";
 import { wsRole } from "@/lib/serviceLayer/workspace/wsRole";
 import { prisma } from "@/lib/db/prisma";
 import { Prisma } from "@prisma/client";
 import { project_due_date_changed_notification } from "@/lib/functions/notifications/notifications";
+import { nameSchema } from "@/lib/functions/route/nameSchema";
 type workspaceMemberIdProp = {
   workspaceMemberUserId: string;
 };
-export const projectPatchSchema = z.object({
+const projectPatchSchema = z.object({
   name: nameSchema.optional(),
   description: z.string().max(1000).optional().nullable(),
   dueDate: z.coerce.date().optional().nullable(),
@@ -24,7 +24,9 @@ export const PATCH = withAuth(
   async (
     user: User,
     req: Request,
-    { params: paramsPromise }: { params: Promise<{ id: string; projectId: string }> },
+    {
+      params: paramsPromise,
+    }: { params: Promise<{ id: string; projectId: string }> },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;

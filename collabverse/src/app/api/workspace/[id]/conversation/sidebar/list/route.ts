@@ -6,7 +6,7 @@ import { wsRole } from "@/lib/serviceLayer/workspace/wsRole";
 import { $Enums } from "@prisma/client";
 import { User } from "@supabase/supabase-js";
 import z from "zod";
-export const convoListSchema = z.object({
+const convoListSchema = z.object({
   cursorId: z.uuid().optional(),
   search: z.string().trim().min(2).optional(),
 });
@@ -69,7 +69,11 @@ type lastMsgProp = {
   }[];
 };
 export const GET = withAuth(
-  async (user: User, req: Request, { params: paramsPromise }: { params: Promise<{ id: string }> }) => {
+  async (
+    user: User,
+    req: Request,
+    { params: paramsPromise }: { params: Promise<{ id: string }> },
+  ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;
     if (!workspaceId) {

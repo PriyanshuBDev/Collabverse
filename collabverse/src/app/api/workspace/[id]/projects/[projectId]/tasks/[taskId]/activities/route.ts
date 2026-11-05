@@ -2,12 +2,12 @@ import { withAuth } from "@/lib/api/auth/withAuth";
 import { apiErrorCustom, zodApiError } from "@/lib/functions/error/apiError";
 import { taskAuthority } from "@/lib/serviceLayer/task/taskAuthority";
 import { User } from "@supabase/supabase-js";
-import { cursorSchema } from "../attachments/route";
 import { prisma } from "@/lib/db/prisma";
 import { activityProps, cursorProps, userIdProp } from "@/app/interfaces";
 import { activityBuilder } from "@/lib/serviceLayer/activity/activityBuilder";
 import { JsonValue } from "@prisma/client/runtime/client";
 import { $Enums } from "@prisma/client";
+import { cursorSchema } from "@/lib/functions/route/cursorSchema";
 type rowProp = {
   id: string;
   createdAt: Date;
@@ -28,7 +28,9 @@ export const GET = withAuth(
   async (
     user: User,
     req: Request,
-    { params: paramsPromise }: { params: Promise<{ id: string; projectId: string; taskId: string }> },
+    {
+      params: paramsPromise,
+    }: { params: Promise<{ id: string; projectId: string; taskId: string }> },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;

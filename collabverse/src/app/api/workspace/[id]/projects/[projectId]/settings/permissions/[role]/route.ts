@@ -12,6 +12,7 @@ const projectPermToggleSchema = z.object({
   permission: z.enum(PPermission),
   enabled: z.boolean(),
 });
+const projectRoleParamSchema = z.enum(["Manager", "Contributor", "Viewer"]);
 const ROLE_PERMISSIONS: Record<
   "Manager" | "Contributor" | "Viewer",
   PPermission[]
@@ -41,13 +42,11 @@ export const PATCH = withAuth(
     const params = await paramsPromise;
     const workspaceId = params.id;
     const projectId = params.projectId;
-    const role = params.role;
-    if (!workspaceId || !projectId || !role) {
+    const parsedRole = projectRoleParamSchema.safeParse(params.role);
+    if (!workspaceId || !projectId || !parsedRole.success) {
       return apiError("Invalid parameters", 400);
     }
-    if (!Object.hasOwn(ROLE_PERMISSIONS, role)) {
-      return apiError("Invalid data", 400);
-    }
+    const role = parsedRole.data;
     const body = await req.json();
     try {
       const { permission, enabled } = projectPermToggleSchema.parse(body);

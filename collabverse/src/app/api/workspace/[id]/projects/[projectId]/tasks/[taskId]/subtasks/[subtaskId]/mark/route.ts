@@ -11,7 +11,7 @@ import { taskRole } from "@/lib/serviceLayer/task/taskRole";
 import { Prisma } from "@prisma/client";
 import { User } from "@supabase/supabase-js";
 import z from "zod";
-export const subtaskMarkSchema = z.object({
+const subtaskMarkSchema = z.object({
   done: z.boolean(),
 });
 export const PATCH = withAuth(

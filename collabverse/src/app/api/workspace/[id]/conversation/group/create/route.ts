@@ -2,17 +2,17 @@ import { withAuth } from "@/lib/api/auth/withAuth";
 import { apiErrorCustom, zodApiError } from "@/lib/functions/error/apiError";
 import { User } from "@supabase/supabase-js";
 import z from "zod";
-import { nameSchema } from "../../../projects/create/route";
 import { wsRole } from "@/lib/serviceLayer/workspace/wsRole";
 import { GroupRole } from "@prisma/client";
 import { prisma } from "@/lib/db/prisma";
 import { addUsersToGroupService } from "@/lib/serviceLayer/conversation/addUsersToGroupService";
 import { prismaTransactionProp } from "@/app/interfaces";
+import { nameSchema } from "@/lib/functions/route/nameSchema";
 type userIdRole = {
   id: string;
   role: "Admin" | "Member";
 };
-export const createConversationSchema = z.object({
+const createConversationSchema = z.object({
   name: nameSchema,
   description: z.string().max(1000).optional(),
   users: z
@@ -26,7 +26,11 @@ export const createConversationSchema = z.object({
 });
 
 export const POST = withAuth(
-  async (user: User, req: Request, { params: paramsPromise }: { params: Promise<{ id: string }> }) => {
+  async (
+    user: User,
+    req: Request,
+    { params: paramsPromise }: { params: Promise<{ id: string }> },
+  ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;
     if (!workspaceId) {

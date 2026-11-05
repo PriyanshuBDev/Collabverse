@@ -2,7 +2,7 @@ import { withAuth } from "@/lib/api/auth/withAuth";
 import { prisma } from "@/lib/db/prisma";
 import { User } from "@supabase/supabase-js";
 import z, { ZodError } from "zod";
-export const themeSchema = z.object({
+const themeSchema = z.object({
   theme: z.enum(["Dark", "Light", "Default"]),
 });
 

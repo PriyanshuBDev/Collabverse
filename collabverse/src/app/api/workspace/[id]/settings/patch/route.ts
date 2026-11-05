@@ -8,15 +8,19 @@ import { User } from "@supabase/supabase-js";
 import z from "zod";
 import { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/db/prisma";
-import { nameSchema } from "../../projects/create/route";
 import { wsRole } from "@/lib/serviceLayer/workspace/wsRole";
+import { nameSchema } from "@/lib/functions/route/nameSchema";
 
-export const editWsSchema = z.object({
+const editWsSchema = z.object({
   name: nameSchema.optional(),
   description: z.string().max(1000).optional().nullable(),
 });
 export const PATCH = withAuth(
-  async (user: User, req: Request, { params: paramsPromise }: { params: Promise<{ id: string }> }) => {
+  async (
+    user: User,
+    req: Request,
+    { params: paramsPromise }: { params: Promise<{ id: string }> },
+  ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;
     if (!workspaceId) {

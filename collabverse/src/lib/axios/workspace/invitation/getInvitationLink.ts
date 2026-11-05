@@ -1,8 +1,13 @@
 import z from "zod";
 import api from "../..";
 import { wsRoleChange } from "../users/changeUserRole";
-import { linkWsInviteSchema } from "@/app/api/workspace/[id]/invitation/link/create/route";
+import { WsRole } from "@prisma/client";
 
+export const linkWsInviteSchema = z.object({
+  maxUses: z.number().min(1).max(100),
+  expireAt: z.coerce.date().optional(),
+  role: z.enum([WsRole.Admin, WsRole.Member]),
+});
 export type InvitationLinkProps = z.infer<typeof linkWsInviteSchema>;
 export async function getInvitationLink({
   workspaceId,

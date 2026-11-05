@@ -1,12 +1,12 @@
 import { withAuth } from "@/lib/api/auth/withAuth";
 import { prisma } from "@/lib/db/prisma";
 import { apiErrorCustom, zodApiError } from "@/lib/functions/error/apiError";
+import { nameSchema } from "@/lib/functions/route/nameSchema";
 import { wsRole } from "@/lib/serviceLayer/workspace/wsRole";
 import { User } from "@supabase/supabase-js";
-import { nameSchema } from "../../../../projects/create/route";
 import z from "zod";
 
-export const groupPatchSchema = z.object({
+const groupPatchSchema = z.object({
   name: nameSchema.optional(),
   description: z.string().max(1000).optional().nullable(),
 });
@@ -14,7 +14,9 @@ export const PATCH = withAuth(
   async (
     user: User,
     req: Request,
-    { params: paramsPromise }: { params: Promise<{ id: string; conversationId: string }> },
+    {
+      params: paramsPromise,
+    }: { params: Promise<{ id: string; conversationId: string }> },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;

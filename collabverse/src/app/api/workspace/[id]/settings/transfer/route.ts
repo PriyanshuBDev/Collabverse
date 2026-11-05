@@ -6,11 +6,15 @@ import { workspaceTransfer_notification } from "@/lib/functions/notifications/no
 import { workspaceTransfer } from "@/lib/serviceLayer/workspace/workspaceTransfer";
 import { User } from "@supabase/supabase-js";
 import z, { ZodError } from "zod";
-export const newOwnerSchema = z.object({
+const newOwnerSchema = z.object({
   newOwnerId: z.string().uuid({ message: "Invalid id" }),
 });
 export const PATCH = withAuth(
-  async (user: User, req: Request, { params: paramsPromise }: { params: Promise<{ id: string }> }) => {
+  async (
+    user: User,
+    req: Request,
+    { params: paramsPromise }: { params: Promise<{ id: string }> },
+  ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;
     if (!workspaceId) {
