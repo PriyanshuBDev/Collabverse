@@ -7,7 +7,10 @@ export async function updateSession(request: NextRequest) {
     request,
   });
   const pathname = request.nextUrl.pathname;
-  if (PUBLIC_ROUTES.some((route) => pathname.startsWith(route))) {
+  if (
+    pathname === "/" ||
+    PUBLIC_ROUTES.some((route) => pathname.startsWith(route))
+  ) {
     return supabaseResponse;
   }
   // With Fluid compute, don't put this client in a global environment
