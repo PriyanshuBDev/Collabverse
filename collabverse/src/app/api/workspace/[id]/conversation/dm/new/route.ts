@@ -1,10 +1,10 @@
 import { withAuth } from "@/lib/api/auth/withAuth";
 import { apiErrorCustom, zodApiError } from "@/lib/functions/error/apiError";
 import { User } from "@supabase/supabase-js";
-import { cursorSearchSchema } from "../../../projects/[projectId]/tasks/[taskId]/users/assign/users/route";
 import { wsRole } from "@/lib/serviceLayer/workspace/wsRole";
 import { prisma } from "@/lib/db/prisma";
 import { memberProps } from "@/app/interfaces";
+import { cursorSearchSchema } from "@/lib/functions/route/cursorSearchSchema";
 type convoMemberProp = {
   conversationMember: {
     userId: string;
@@ -19,7 +19,11 @@ type rowProp = {
   };
 };
 export const GET = withAuth(
-  async (user: User, req: Request, { params: paramsPromise }: { params: Promise<{ id: string }> }) => {
+  async (
+    user: User,
+    req: Request,
+    { params: paramsPromise }: { params: Promise<{ id: string }> },
+  ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;
     const { searchParams } = new URL(req.url);
