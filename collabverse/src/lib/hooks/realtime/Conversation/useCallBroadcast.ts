@@ -18,6 +18,9 @@ export function useCallBroadcast() {
     if (!currentUserId || !callId) return;
     const channel = await waitForSignalingReady();
     if (!channel) {
+      console.error("[call-debug] signaling channel did not become ready", {
+        type,
+      });
       throw new Error("Call signaling channel failed to subscribe");
     }
 
@@ -30,6 +33,7 @@ export function useCallBroadcast() {
       mode: callMode ?? "Voice",
       payload: extra,
     };
+    console.info("[call-debug] sending signaling message", { type });
     await sendBroadcast(channel, {
       event: payload.type,
       payload,

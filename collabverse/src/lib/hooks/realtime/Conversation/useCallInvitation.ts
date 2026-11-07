@@ -45,6 +45,7 @@ export function useCallInvitaion(props: Props) {
             return;
           }
 
+          console.info("[call-debug] received signaling message", { event });
           handler(payload);
         },
       );

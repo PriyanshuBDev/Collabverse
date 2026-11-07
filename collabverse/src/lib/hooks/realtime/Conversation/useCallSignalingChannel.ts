@@ -37,7 +37,10 @@ export function useCallSignalingChannel({ callId }: { callId: string | null }) {
     setChannel(realtimeChannel);
 
     realtimeChannel.subscribe((status, err) => {
-      console.log("callSignalingChannel", status, err);
+      console.info("[call-debug] signaling channel", {
+        status,
+        error: err?.message ?? null,
+      });
 
       if (status === "SUBSCRIBED" && !settled) {
         settled = true;

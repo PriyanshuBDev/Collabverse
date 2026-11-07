@@ -202,6 +202,9 @@ export function useCall() {
       peerRef.current = peer;
       remoteUserIdRef.current = remoteUserId;
       peer.ontrack = (event) => {
+        console.info("[call-debug] remote media track received", {
+          kinds: event.streams[0]?.getTracks().map((track) => track.kind) ?? [],
+        });
         const stream = event.streams[0];
         if (stream) {
           setRemoteStream(stream);
@@ -217,6 +220,11 @@ export function useCall() {
         await sendCandidate(remoteUserId, conversationId, event.candidate);
       };
       peer.onconnectionstatechange = async () => {
+        console.info("[call-debug] peer connection state", {
+          connection: peer.connectionState,
+          ice: peer.iceConnectionState,
+          signaling: peer.signalingState,
+        });
         switch (peer.connectionState) {
           case "connecting":
             setCallState(CallState.CONNECTING);
@@ -245,6 +253,12 @@ export function useCall() {
             setCallEndReason("Ended");
             break;
         }
+      };
+      peer.oniceconnectionstatechange = () => {
+        console.info("[call-debug] ICE connection state", {
+          ice: peer.iceConnectionState,
+          gathering: peer.iceGatheringState,
+        });
       };
       return peer;
     },
@@ -467,6 +481,7 @@ export function useCall() {
       setShowError(getMediaErrorMessage(e));
     }
     const offer = await createOffer(peer);
+      console.info("[call-debug] local offer created");
     await sendOffer(remoteUserId, conversationId, offer);
   }, [
     clearCallTimeout,
@@ -517,6 +532,7 @@ export function useCall() {
         setShowError(getMediaErrorMessage(e));
       }
       await setRemoteDescription(peer, offer);
+      console.info("[call-debug] remote offer applied");
       await flushPendingCandidates(peer);
       if (peer.signalingState !== "have-remote-offer") {
         console.warn(
@@ -528,6 +544,7 @@ export function useCall() {
       const answer = await createAnswer(peer);
 
       await sendAnswer(payload.from, payload.conversationId, answer);
+      console.info("[call-debug] answer sent");
       if (callId) {
         join.mutate({ conversationId: conversationIdRef.current, callId });
       }
@@ -556,6 +573,7 @@ export function useCall() {
       const answer = payload.payload;
       if (!isRTCSessionDescriptionInit(answer)) return;
       await setRemoteDescription(peer, answer);
+      console.info("[call-debug] remote answer applied");
       await flushPendingCandidates(peer);
     },
     [currentUserId, flushPendingCandidates],
