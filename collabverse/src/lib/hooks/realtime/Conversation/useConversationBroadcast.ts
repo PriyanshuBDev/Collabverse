@@ -5,6 +5,7 @@ import useCurrentUser from "../../useCurrentUser";
 import { useCallback } from "react";
 import { useConvoBroadCastStore } from "../../zustand/useConvoBroadcastStore";
 import { useActiveConversationStore } from "../../zustand/useActiveConversationStore";
+import { sendBroadcast } from "../sendBroadcast";
 
 export function useConversationBroadcast() {
   const { id: currentUserId } = useCurrentUser();
@@ -20,8 +21,7 @@ export function useConversationBroadcast() {
   );
   const sendTypingStart = useCallback(async () => {
     if (!currentUserId || !channel) return;
-    await channel.send({
-      type: "broadcast",
+    await sendBroadcast(channel, {
       event: "typing:start",
       payload: {
         userId: currentUserId,
@@ -31,8 +31,7 @@ export function useConversationBroadcast() {
   }, [currentUserId, channel, conversationId]);
   const sendTypingStop = useCallback(async () => {
     if (!currentUserId || !channel) return;
-    await channel.send({
-      type: "broadcast",
+    await sendBroadcast(channel, {
       event: "typing:stop",
       payload: {
         userId: currentUserId,
@@ -42,8 +41,7 @@ export function useConversationBroadcast() {
   }, [currentUserId, channel, conversationId]);
   const sendMediaUploadingStart = useCallback(async () => {
     if (!currentUserId || !channel) return;
-    await channel.send({
-      type: "broadcast",
+    await sendBroadcast(channel, {
       event: "media:upload:start",
       payload: {
         userId: currentUserId,
@@ -54,8 +52,7 @@ export function useConversationBroadcast() {
   const sendMediaUploadingStop = useCallback(async () => {
     if (!currentUserId || !channel) return;
     console.log("stop sent");
-    await channel.send({
-      type: "broadcast",
+    await sendBroadcast(channel, {
       event: "media:upload:stop",
       payload: {
         userId: currentUserId,

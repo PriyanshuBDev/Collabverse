@@ -2,6 +2,7 @@ import { useCallChannelRT } from "@/components/wrappers/CallChannelProvider";
 import useCurrentUser from "../../useCurrentUser";
 import { useCallStore } from "../../zustand/useCallStore";
 import { CallSpace, SignalMessage, signalType } from "@/app/interfaces";
+import { sendBroadcast } from "../sendBroadcast";
 
 export function useCallActions() {
   const { id: currentUserId } = useCurrentUser();
@@ -25,8 +26,7 @@ export function useCallActions() {
       mode: callMode ?? "Voice",
       payload: extra,
     };
-    await channel.send({
-      type: "broadcast",
+    await sendBroadcast(channel, {
       event: payload.type,
       payload,
     });

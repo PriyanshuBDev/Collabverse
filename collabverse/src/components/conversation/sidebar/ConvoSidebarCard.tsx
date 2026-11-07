@@ -170,7 +170,7 @@ export default function ConvoSidebarCard({
                 c.unread ? "text-blue-500" : "text-gray-500"
               } text-xs`}
             >
-              {chatDateFormatter(c.lastActivityAt)}
+              {chatDateFormatter(new Date(c.lastActivityAt))}
             </div>
           )}
         </div>

@@ -2,6 +2,7 @@ import useCurrentUser from "../../useCurrentUser";
 import { SignalMessage, signalType } from "@/app/interfaces";
 import { useCallStore } from "../../zustand/useCallStore";
 import { useCallSignalingProvider } from "@/components/wrappers/CallSignalingProvider";
+import { sendBroadcast } from "../sendBroadcast";
 
 export function useCallBroadcast() {
   const { id: currentUserId } = useCurrentUser();
@@ -29,8 +30,7 @@ export function useCallBroadcast() {
       mode: callMode ?? "Voice",
       payload: extra,
     };
-    await channel.send({
-      type: "broadcast",
+    await sendBroadcast(channel, {
       event: payload.type,
       payload,
     });

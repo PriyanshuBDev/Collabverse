@@ -49,6 +49,7 @@ export const useCallMutations = () => {
       };
       upsertSidebar(vars.conversationId, workspaceId, currentUserId, false, {
         lastMessage,
+        lastActivityAt: data.msg.sentAt,
       });
     },
   });
@@ -80,6 +81,7 @@ export const useCallMutations = () => {
       };
       upsertSidebar(data.conversationId, workspaceId, currentUserId, false, {
         lastMessage,
+        lastActivityAt: data.msg.sentAt,
       });
     },
   });
