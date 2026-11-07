@@ -1,6 +1,6 @@
 import { useCallChannelRT } from "@/components/wrappers/CallChannelProvider";
 import useCurrentUser from "../useCurrentUser";
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   CallEndReason,
   callMode,
@@ -44,7 +44,7 @@ export function useCall() {
   const pendingCandidatesRef = useRef<RTCIceCandidateInit[]>([]);
   const cameraStreamRef = useRef<MediaStream | null>(null);
   const screenStreamRef = useRef<MediaStream | null>(null);
-  const pendingOfferRef = useRef<RTCSessionDescriptionInit | null>(null);
+  const pendingOfferRef = useRef<SignalMessage | null>(null);
   const callTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [callEndReason, setCallEndReason] = useState<CallEndReason>();
   const [showError, setShowError] = useState<string | null>(null);
@@ -491,7 +491,7 @@ export function useCall() {
       const offer = payload.payload;
       if (!isRTCSessionDescriptionInit(offer)) return;
       if (callState === CallState.RINGING) {
-        pendingOfferRef.current = offer;
+        pendingOfferRef.current = payload;
         return;
       }
 
@@ -560,6 +560,15 @@ export function useCall() {
     },
     [currentUserId, flushPendingCandidates],
   );
+
+  useEffect(() => {
+    if (callState !== CallState.CONNECTING || !pendingOfferRef.current) return;
+
+    const pendingOffer = pendingOfferRef.current;
+    pendingOfferRef.current = null;
+    void onOffer(pendingOffer);
+  }, [callState, onOffer]);
+
   const onCandidate = useCallback(
     async (payload: SignalMessage) => {
       if (payload.to !== currentUserId) return;
