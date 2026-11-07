@@ -48,25 +48,24 @@ export function WsInvitationCard({
 
   return (
     <OverlayWrapper active={show}>
-      {data.expireAt &&
-      new Date(data.expireAt).getTime() <= new Date().getTime() ? (
-        <div className="flex gap-3">
-          <div>
-            <div className="text-base lg:text-lg text-red-500 flex flex-wrap max-w-sm lg:max-w-md ">
-              Invaitation has been expired at {DateFormatter2(data.expireAt)}
-            </div>
-          </div>
-          <Xbtn onClick={() => setShow(false)} size="size-5 lg:size-6"></Xbtn>
-        </div>
+      {data.status === "Accepted" ? (
+        data.joinRequestStatus === "Approved" ? (
+          <Card label="Join request already approved" setShow={setShow} />
+        ) : data.joinRequestStatus === "Pending" ? (
+          <Card label="Waiting for join request approval" setShow={setShow} />
+        ) : data.joinRequestStatus === "Rejected" ? (
+          <Card label="Join request has been rejected" setShow={setShow} />
+        ) : (
+          <Card label="Waiting for join request approval" setShow={setShow} />
+        )
+      ) : data.expireAt &&
+        new Date(data.expireAt).getTime() <= new Date().getTime() ? (
+        <Card
+          label={`Invaitation has been expired at ${DateFormatter2(data.expireAt)}`}
+          setShow={setShow}
+        />
       ) : data.status === "Revoked" ? (
-        <div className="flex gap-3">
-          <div>
-            <div className="text-base lg:text-lg text-red-500 flex flex-wrap max-w-sm lg:max-w-md ">
-              Invitation has been revoked
-            </div>
-          </div>
-          <Xbtn onClick={() => setShow(false)} size="size-5 lg:size-6"></Xbtn>
-        </div>
+        <Card label="Invitation has been revoked" setShow={setShow} />
       ) : (
         <div className="lg:w-sm w-xs  text-gray-900 dark:text-gray-100">
           <FlexBtwWrapper>
@@ -246,5 +245,24 @@ export function WsInvitationCard({
         </div>
       )}
     </OverlayWrapper>
+  );
+}
+
+function Card({
+  label,
+  setShow,
+}: {
+  label: string;
+  setShow: Dispatch<SetStateAction<boolean>>;
+}) {
+  return (
+    <div className="flex gap-3">
+      <div>
+        <div className="text-base lg:text-lg text-red-500 flex flex-wrap max-w-sm lg:max-w-md ">
+          {label}
+        </div>
+      </div>
+      <Xbtn onClick={() => setShow(false)} size="size-5 lg:size-6"></Xbtn>
+    </div>
   );
 }

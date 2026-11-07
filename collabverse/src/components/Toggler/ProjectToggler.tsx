@@ -33,6 +33,7 @@ export default function ProjectToggler({
       : "overview";
     setSelected(tab);
   }, [id, setSelected, data]);
+  if (!data) return null;
   return (
     <div className=" border-gray-200 dark:border-gray-700 w-full flex items-center md:gap-10 gap-5 px-5">
       {tabs.map((t: tabsProps, idx: number) => (

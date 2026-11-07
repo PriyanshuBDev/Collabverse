@@ -10,6 +10,7 @@ import {
   GroupRole,
   InvitationRole,
   InvitationStatus,
+  JoinStatus,
   MessageType,
   MuteEnum,
   NotificationType,
@@ -963,6 +964,7 @@ export interface wsInvitationProps {
   available: number | null;
   workspace: basicWsDetails;
   role: InvitationRole;
+  joinRequestStatus: JoinStatus | undefined;
 }
 
 export interface projectInvitationProps {

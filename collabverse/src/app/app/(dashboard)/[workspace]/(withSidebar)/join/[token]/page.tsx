@@ -46,7 +46,19 @@ export default function Join() {
   const isRevoked = data.status === "Revoked";
   return (
     <div className="flex items-center justify-center h-full w-full transition-all duration-300 bg-gray-50 dark:bg-blk4 shadow-md rounded-xl z-1001 p-5">
-      {isExpired && data.expireAt ? (
+      {data.joinRequestStatus === "Approved" ? (
+        <div className="text-base lg:text-lg text-red-500 flex flex-wrap max-w-sm lg:max-w-md ">
+          Join request already approved
+        </div>
+      ) : data.joinRequestStatus === "Pending" ? (
+        <div className="text-base lg:text-lg text-red-500 flex flex-wrap max-w-sm lg:max-w-md ">
+          Waiting for join request approval
+        </div>
+      ) : data.joinRequestStatus === "Rejected" ? (
+        <div className="text-base lg:text-lg text-red-500 flex flex-wrap max-w-sm lg:max-w-md ">
+          Join request has been rejected
+        </div>
+      ) : isExpired && data.expireAt ? (
         <>
           <div className="text-base lg:text-lg text-red-500 flex flex-wrap max-w-sm lg:max-w-md ">
             Invaitation has been expired at {DateFormatter2(data.expireAt)}

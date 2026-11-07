@@ -8,7 +8,9 @@ export const GET = withAuth(
   async (
     user: User,
     req: Request,
-    { params: paramsPromise }: { params: Promise<{ id: string; invitationId: string }> },
+    {
+      params: paramsPromise,
+    }: { params: Promise<{ id: string; invitationId: string }> },
   ) => {
     const params = await paramsPromise;
     const workspaceId = params.id;
@@ -37,6 +39,15 @@ export const GET = withAuth(
           usedCount: true,
           expireAt: true,
           createdAt: true,
+          joinRequests: {
+            where: {
+              userId: user.id,
+            },
+            take: 1,
+            select: {
+              status: true,
+            },
+          },
         },
       });
       if (!invite) {
@@ -95,6 +106,7 @@ export const GET = withAuth(
               name: "Former member",
               avatar: "/assets/anonymous.webp",
             },
+        joinRequestStatus: invite.joinRequests.at(0)?.status ?? undefined,
       };
 
       return Response.json({ invitation }, { status: 200 });
