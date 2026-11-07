@@ -16,6 +16,12 @@ export function useLocalMedia(
   const [localStream, setLocalStream] = useState<MediaStream | null>(null);
 
   const getUserAudio = async () => {
+    const existingStream = cameraStreamRef.current;
+    if (
+      existingStream?.getAudioTracks().some((track) => track.readyState === "live")
+    ) {
+      return existingStream;
+    }
     const stream = await getMic();
     cameraStreamRef.current = stream;
     setLocalStream(stream);

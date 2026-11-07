@@ -28,6 +28,7 @@ import { useCreateNewDm } from "@/lib/queries/workspace/conversation/dm/new/useC
 import { useCallActions } from "../realtime/Conversation/useCallActions";
 import { useCallInvitaion } from "../realtime/Conversation/useCallInvitation";
 import { getMediaErrorMessage } from "@/lib/functions/error/getMediaErrorMessage";
+import { toast } from "sonner";
 export interface PendingIncomingCall {
   from: string;
   conversationId: string;
@@ -301,16 +302,27 @@ export function useCall() {
       space: CallSpace,
       conversationId?: string,
     ) => {
-      if (active) {
-        return;
-      } else {
-        setActive(true);
-      }
       if (!channel) return;
+      if (active) return;
+      setActive(true);
       setCallEndReason(undefined);
       setCallSpace(space);
       setRemoteUserData(remoteUserData);
       setCallStarted(true);
+      setCallMode(mode);
+      try {
+        if (mode === "Voice") {
+          await getUserAudio();
+        } else {
+          await getUserMedia();
+        }
+      } catch (e) {
+        console.error("[call-debug] local media permission failed", e);
+        toast.error(getMediaErrorMessage(e));
+        setActive(false);
+        setCallStarted(false);
+        return;
+      }
       try {
         if (space === "Flowspace") {
           const data = await createCallWithConvo.mutateAsync({
@@ -333,7 +345,6 @@ export function useCall() {
       remoteUserIdRef.current = remoteUserData.id;
       conversationIdRef.current = conversationId;
       setCallState(CallState.CALLING);
-      setCallMode(mode);
       await sendIncomingCall(remoteUserData.id, conversationId, space);
       clearCallTimeout();
       callTimeoutRef.current = setTimeout(async () => {
@@ -350,6 +361,8 @@ export function useCall() {
       clearCallTimeout,
       callEnd,
       createCall,
+      getUserAudio,
+      getUserMedia,
       active,
       setActive,
       createCallWithConvo,
@@ -414,6 +427,19 @@ export function useCall() {
   const acceptCall = useCallback(async () => {
     if (!incomingCall || !channel) return;
     const { from, conversationId } = incomingCall;
+    const mode = incomingCall.callType;
+    try {
+      if (mode === "Voice") {
+        await getUserAudio();
+      } else {
+        await getUserMedia();
+      }
+    } catch (e) {
+      console.error("[call-debug] local media permission failed", e);
+      toast.error(getMediaErrorMessage(e));
+      return;
+    }
+    setCallMode(mode);
     setIncomingCall(null);
     setIsAccepted(true);
     remoteUserIdRef.current = from;
@@ -427,6 +453,9 @@ export function useCall() {
     sendAccept,
     setIncomingCall,
     setIsAccepted,
+    getUserAudio,
+    getUserMedia,
+    setCallMode,
   ]);
   const rejectCall = useCallback(async () => {
     setActive(false);
