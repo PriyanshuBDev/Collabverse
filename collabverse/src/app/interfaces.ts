@@ -1109,6 +1109,10 @@ export type CallEndReason =
   | "Cancelled"
   | "Ended"
   | "Failed";
+export type TurnixCredentialsResponse = {
+  iceServers: RTCIceServer[];
+  expiresAt: string;
+};
 export type homeProps = {
   activeProjects: number;
   activeProjectsIncreasedBy: number;

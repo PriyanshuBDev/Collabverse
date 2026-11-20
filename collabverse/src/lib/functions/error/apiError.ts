@@ -38,7 +38,9 @@ type message =
   | "Comment not found"
   | "Membership not found"
   | "Transfer your workspace ownership before leaving"
-  | "Transfer your project ownership before leaving";
+  | "Transfer your project ownership before leaving"
+  | "TURN service is not configured"
+  | "Could not obtain TURN credentials";
 const ERROR_STATUS_MAP: Record<message, number> = {
   "Invalid data": 400,
   "Invalid parameters": 400,
@@ -75,6 +77,8 @@ const ERROR_STATUS_MAP: Record<message, number> = {
   "Membership not found": 404,
   "Transfer your workspace ownership before leaving": 403,
   "Transfer your project ownership before leaving": 403,
+  "TURN service is not configured": 500,
+  "Could not obtain TURN credentials": 502,
 };
 
 export function apiErrorCustom(message: message) {

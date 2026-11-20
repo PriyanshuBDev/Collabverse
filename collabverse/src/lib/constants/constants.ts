@@ -12,9 +12,4 @@ export const taskRolesArray: TaskRole[] = [
   TaskRole.Reviewer,
 ];
 
-export const ICE_SERVERS = [
-  {
-    urls: "stun:stun.l.google.com:19302",
-  },
-];
 export const CALL_TIMEOUT = 30 * 1000;

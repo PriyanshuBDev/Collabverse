@@ -195,11 +195,11 @@ export function useCall() {
     clearCallTimeout();
   };
   const initializePeer = useCallback(
-    (remoteUserId: string) => {
+    async (remoteUserId: string) => {
       if (peerRef.current) {
         return peerRef.current;
       }
-      const peer = createPeer();
+      const peer = await createPeer();
       peerRef.current = peer;
       remoteUserIdRef.current = remoteUserId;
       peer.ontrack = (event) => {
@@ -491,7 +491,7 @@ export function useCall() {
     const conversationId = conversationIdRef.current;
     if (!remoteUserId || !conversationId) return;
     setCallState(CallState.CONNECTING);
-    const peer = initializePeer(remoteUserId);
+    const peer = await initializePeer(remoteUserId);
     const callMode = useCallStore.getState().callMode;
     try {
       if (callMode === "Voice") {
@@ -510,7 +510,7 @@ export function useCall() {
       setShowError(getMediaErrorMessage(e));
     }
     const offer = await createOffer(peer);
-      console.info("[call-debug] local offer created");
+    console.info("[call-debug] local offer created");
     await sendOffer(remoteUserId, conversationId, offer);
   }, [
     clearCallTimeout,
@@ -543,7 +543,7 @@ export function useCall() {
       if (callState !== CallState.CONNECTING) {
         return;
       }
-      const peer = initializePeer(payload.from);
+      const peer = await initializePeer(payload.from);
       try {
         if (payload.mode === "Voice") {
           setCallMode("Voice");

@@ -1,10 +1,17 @@
-import { ICE_SERVERS } from "../constants/constants";
+import { TurnixCredentialsResponse } from "@/app/interfaces";
+import api from "../axios";
 import { stopStream } from "./media";
 
-export function createPeer() {
-  return new RTCPeerConnection({
-    iceServers: ICE_SERVERS,
-  });
+export async function createPeer() {
+  const response = await api<TurnixCredentialsResponse>(
+    "/api/turn-credentials",
+  );
+
+  if (!response.data) {
+    throw new Error("Could not obtain TURN credentials");
+  }
+
+  return new RTCPeerConnection({ iceServers: response.data.iceServers });
 }
 export function registerIceCandidateHandler(
   pc: RTCPeerConnection,

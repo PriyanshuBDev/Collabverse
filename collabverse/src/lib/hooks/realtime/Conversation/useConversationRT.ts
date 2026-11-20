@@ -265,7 +265,8 @@ export function useConversationRT(
               avatar: undefined,
               username: "unknown",
             };
-            if (sentBy.id === currentUserId) return;
+            if (sentBy.id === currentUserId && !messagePayload.callSessionId)
+              return;
             const message: CompleteChatProps = {
               id: messagePayload.id,
               type: messagePayload.type,
